@@ -34,7 +34,7 @@
       PREFIX event: <http://purl.org/NET/c4dm/event.owl#> 
 
       construct {
-        _:albums  foaf:made ?release;
+        ?release  foaf:made ?release;
       dc:title ?title;
       dc:date ?date;
       rdfs:label ?placeTitle.
@@ -44,13 +44,11 @@
         foaf:made ?release.
         ?release dc:title ?_title.
         ?release_event mo:release ?release;
-        dc:date ?_date;
+        dc:date ?date;
         event:place ?place.
         ?place rdfs:label ?placeTitle.
 
-      bind( str(?_date) as ?date )
-      bind( str(?_title) as ?title )
-      } GROUP BY ?release`;
+       } GROUP BY ?release`;
 
     function get_request(query, options) {
         var endPointUrl = 'http://diufpc116.unifr.ch:8890/sparql';
