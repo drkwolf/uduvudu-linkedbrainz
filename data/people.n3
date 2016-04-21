@@ -1,0 +1,1344 @@
+# Exported with the Erfurt API - http://aksw.org/Projects/Erfurt
+
+@base <http://eis.iai.uni-bonn.de/> .
+@prefix sysont: <http://ns.ontowiki.net/SysOnt/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix sioc: <http://rdfs.org/sioc/ns#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix geo: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix site: <http://ns.ontowiki.net/SysOnt/Site/> .
+@prefix void: <http://rdfs.org/ns/void#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix v: <http://www.w3.org/2006/vcard/ns#> .
+@prefix content: <http://purl.org/rss/1.0/modules/content/> .
+@prefix lod2: <http://lod2.eu/schema/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dbpedia: <http://dbpedia.org/resource/> .
+@prefix doap: <http://usefulinc.com/ns/doap#> .
+@prefix sioct: <http://rdfs.org/sioc/types#> .
+@prefix aiiso: <http://purl.org/vocab/aiiso/schema#> .
+@prefix ov: <http://open.vocab.org/terms/> .
+@prefix vs: <http://www.w3.org/2003/06/sw-vocab-status/ns#> .
+@prefix schema: <http://schema.org/> .
+@prefix label: <http://purl.org/net/vocab/2004/03/label#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix umbel: <http://umbel.org/umbel#> .
+@prefix vann: <http://purl.org/vocab/vann/> .
+@prefix ns14: <https://twitter.com/Daniel_hladky#> .
+@prefix ns4: <http://vocab.ox.ac.uk/projectfunding#> .
+@prefix ns0: <http://139.18.2.164:8080/> .
+@prefix ns1: <http://cstadler.aksw.org/> .
+@prefix ns2: <http://139.18.2.164:4444/demo/> .
+@prefix ns3: <http://nlp2rdf.lod2.eu/> .
+@prefix ns7: <https://twitter.com/alex_siebert#> .
+@prefix ns8: <http://hans.uszkoreit.net/#> .
+@prefix ns9: <http://www.nittka.de/index_e.html#> .
+@prefix ns10: <http://de.linkedin.com/pub/andreas-both/22/672/942#> .
+@prefix ns11: <http://www.mi.fu-berlin.de/inf/groups/ag-csw/Members/almashraee.html#> .
+@prefix ns12: <http://www.hpi.uni-potsdam.de/meinel/lehrstuhl/team_fotos/current_phd_students/christian_hentschel.html#> .
+@prefix ns13: <http://www.xing.com/profile/Mario_Lenz#> .
+@prefix ns5: <http://eis.iai.uni-bonn.de/SchemaEvent/> .
+@prefix ns15: <http://eis.iai.uni-bonn.de/Events/2013/LeipzigerSemanticWebTag/Presenter/> .
+@prefix projects: <http://eis.iai.uni-bonn.de/Projects/> .
+@prefix ns6: <http://eis.iai.uni-bonn.de/Events/2013/> .
+@prefix lswt2013: <http://eis.iai.uni-bonn.de/Events/2013/LeipzigerSemanticWebTag/> .
+@prefix groups: <http://eis.iai.uni-bonn.de/Groups/> .
+@prefix people: <http://eis.iai.uni-bonn.de/> .
+@prefix ns16: <http://eis.iai.uni-bonn.de/Partner/> .
+@prefix ns17: <http://cstadler.eis.iai.uni-bonn.de/> .
+@prefix eis: <http://eis.iai.uni-bonn.de/schema/> .
+@prefix qb: <http://purl.org/linked-data/cube#> .
+@prefix address: <http://eis.iai.uni-bonn.de/Address/> .
+@prefix ns18: <http://eis.iai.uni-bonn.de/schema_Event/> .
+@prefix ns19: <http://eis.iai.uni-bonn.de/Project_Partner/> .
+@prefix ns20: <http://aksw.org/schema/> .
+@prefix ns21: <http://eis.uni-bonn.de/Person/> .
+@prefix ns22: <http://eis.uni-bonn.de/> .
+@prefix aair: <http://xmlns.notu.be/aair#> .
+@prefix ns23: <http://www.iais.fraunhofer.de/#> .
+@prefix ns24: <http://eis.iai.uni-bonn.de/Demo/> .
+@prefix ns25: <http://> .
+@prefix ns26: <http://butterbur04.iai.uni-bonn.de/ontowiki/diachron/> .
+@prefix ns27: <https://github.com/AKSW/semann/> .
+@prefix ns28: <http://eis.iai.uni-bonn.de/foaf_Person/> .
+@prefix ns29: <http://eis.iai.uni-bonn.de/view/r/> .
+@prefix ns30: <http://52.26.72.112:3000/query/> .
+@prefix ns31: <https://github.com/EIS-Bonn/> .
+@prefix ns32: <http://eis.iai.uni-bonn.de/Event/> .
+
+people:ChristophLange a foaf:Person ;
+                      rdfs:label "Dr. Christoph Lange" ;
+                      rdfs:seeAlso <http://langec.wordpress.com/about> ;
+                      owl:sameAs <http://purl.org/net/clange> ;
+                      skos:prefLabel "Dr. Christoph Lange" ;
+                      foaf:name "Christoph Lange" ;
+                      foaf:homepage <http://langec.wordpress.com/about> ;
+                      site:templateOption "minimal" ;
+                      skos:hiddenLabel "Christoph Lange-Bever" ;
+                      foaf:currentProject projects:OSCOSS, projects:OpenCourseWare_observatory, projects:WDAqua_ITN, projects:Diachron, projects:VoCol ;
+                      foaf:depiction <http://www.iai.uni-bonn.de/~langec/photo.jpg> ;
+                      foaf:mbox <mailto:math.semantic.web@gmail.com> ;
+                      foaf:phone <tel:+492241142428> ;
+                      foaf:familyName "Lange" ;
+                      eis:publicationTag "lange" ;
+                      eis:room "A209" .
+
+people:Najmeh a foaf:Person ;
+              foaf:name "Najmeh Mousavi" ;
+              foaf:homepage "https://de.linkedin.com/pub/najmeh-mousavi/36/9a6/3b" ;
+              foaf:depiction <http://eis.iai.uni-bonn.de/upload/thumbnails/najmen.jpg> ;
+              foaf:mbox <mailto:nejad@iai.uni-bonn.de> ;
+              eis:room "A118" ;
+              site:content """I carried out my bachelor education in one of the best technical universities of Iran, Amirkabir University of Technology.  In my bachelors, I put majority of my efforts in the theoretical computer science and programming-related courses, in which I was always interested. During my undergraduate studies, participating in different research programs has improved my abilities in working in large groups of researchers and developers on a big project.
+
+Another source where I learned a lot was my working experiences; it gave me a good idea of how academic work can help the industrial products or applications.
+
+I carried out my M.Sc. at Islamic Azad university - Science & Research Branch in Artificial Intelligence which is a program of Computer Engineering department. During my master studies I focused on speech and natural language processing related courses and researches. I took all of my elective courses in these fields and did a number of researches.
+
+The largest practical project was my M.Sc. thesis titled “Transliteration of English-Persian Names and Vice Versa Based on Statistical Methods”, for which we proposed new algorithm for aligning name pairs. I succeeded to publish two international papers and one paper in national conference based on master thesis."""^^sysont:Markdown .
+
+people:Fathoni_Musyaffa a foaf:Person ;
+                        rdfs:label "Fathoni Musyaffa" ;
+                        foaf:name "Fathoni Musyaffa" ;
+                        foaf:homepage <https://id.linkedin.com/in/fathoni> ;
+                        skos:hiddenLabel "Fathoni Musyaffa" ;
+                        foaf:currentProject <http://eis.iai.uni-bonn.de/Projects/OpenBudgets.eu> ;
+                        foaf:depiction <https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/1/000/117/1c5/34d913c.jpg> ;
+                        foaf:mbox <mailto:musyaffa@iai.uni-bonn.de> ;
+                        foaf:familyName "Musyaffa" ;
+                        eis:room "A119" .
+
+people:Saleh_Alkarabubi a foaf:Person ;
+                        rdfs:label "Saleh Alkarabubi" ;
+                        skos:prefLabel "Saleh Alkarabubi" ;
+                        foaf:name "Saleh" ;
+                        foaf:depiction <https://lh5.googleusercontent.com/-jrdiHjbnGHw/VRwaaonGakI/AAAAAAAAMac/MjrAbVM7N88/s76-c-ODR8CYs7TZuQ/S.O.A.jpg> ;
+                        foaf:mbox <mailto:s6saalka@uni-bonn.de> ;
+                        foaf:homepage "" ;
+                        foaf:familyName "Alkarabubi" ;
+                        eis:room "A110a" .
+
+people:Kuldeep_Singh a foaf:Person ;
+                     rdfs:label "Kuldeep Singh" ;
+                     skos:prefLabel "Kuldeep Singh" ;
+                     foaf:name "Kuldeep Singh" ;
+                     skos:hiddenLabel "Kuldeep Singh" ;
+                     foaf:mbox "" ;
+                     foaf:homepage "" ;
+                     foaf:currentProject projects:WDAqua_ITN ;
+                     foaf:depiction <https://media.licdn.com/media/AAEAAQAAAAAAAAJgAAAAJGI4Y2I2NGE2LTRjNDMtNGRiYS1hYmE3LTQ3ZTFjNjg3ZmE4Yw.jpg> ;
+                     eis:publicationTag "singh" .
+
+people:JudieAttard a foaf:Person ;
+                   skos:prefLabel "Judie Attard" ;
+                   foaf:name "Judie Attard" ;
+                   site:templateOption "minimal" ;
+                   foaf:homepage "" ;
+                   foaf:currentProject projects:Linda ;
+                   foaf:depiction <https://media.licdn.com/media/p/7/000/271/093/2b701cc.jpg> ;
+                   foaf:mbox <mailto:attard@informatik.uni-bonn.de>, <mailto:judie.attard@iais-extern.fraunhofer.de> ;
+                   foaf:familyName "Attard" ;
+                   eis:publicationTag "attard" ;
+                   eis:room "A110a" .
+
+people:Kemele_M_Endris a foaf:Person ;
+                       rdfs:label "Kemele M. Endris" ;
+                       owl:sameAs <https://www.linkedin.com/in/keme686>, <https://twitter.com/KemeleM> ;
+                       skos:prefLabel "Kemele M. Endris" ;
+                       foaf:name "Kemele M. Endris" ;
+                       foaf:homepage "" ;
+                       site:templateOption "minimal" ;
+                       skos:hiddenLabel "Kemele Muhammed Endris" ;
+                       foaf:currentProject projects:Linda, projects:iRap, projects:WDAqua_ITN ;
+                       foaf:depiction <https://lh3.googleusercontent.com/-uTRBYDJh5A0/T7EAgQDbK_I/AAAAAAAAAG8/Lyv0h7ItozM/s577-no/j.jpg> ;
+                       foaf:mbox <mailto:endris@cs.uni-bonn.de> ;
+                       foaf:phone <tel:+4915144928948> ;
+                       foaf:familyName "Endris" ;
+                       eis:publicationTag "endris" ;
+                       eis:room "A119" ;
+                       site:content """# Publications:
+## 2015
+1. \"Interest-based RDF Update Propagation\", Kemele M. Endris, Sidra Faisal, Fabrizio Orlandi, Soren Auer, Simon Scerri, ISWC 2015
+1. \"iRap -- An Interest-based RDF Update Propagation Framework (poster)\",  Kemele M. Endris, Sidra Faisal, Fabrizio Orlandi, Soren Auer, Simon Scerri, ISWC2015- Poster session
+
+## 2014
+1. \"SPARQL Query Result Explanation for Linked Data\", Rakebul Hasan, Kemele M Endris, Fabien Gandon, SWCS2014"""^^sysont:Markdown ;
+                       <schema:location> "University of Bonn, Computer Science/EIS,  Römerstr. 164, 53117 Bonn, Germany" ;
+                       <site:content> "Publications:" .
+
+people:Lavdim a foaf:Person ;
+              rdfs:label "Lavdim Halilaj" ;
+              foaf:name "Lavdim Halilaj" ;
+              foaf:homepage "" ;
+              dcterms:description """Research and Technology Interests:
+
+- Ontology Engineering,
+- Linked Open Data,
+- Semantic Web and Technologies,
+- Software Engineering and Agile Methodologies. In particular modern UI
+
+
+Me Elsewhere
+
+[ResearchGate](http://www.researchgate.net/profile/Lavdim_Halilaj \"ResearchGate\")
+[LinkedIn](https://www.linkedin.com/pub/lavdim-halilaj/22/b15/843 \"LinkedIn\")
+
+"""^^sysont:Markdown ;
+              foaf:currentProject projects:LUCID, projects:VoCol ;
+              foaf:depiction <https://lh4.googleusercontent.com/-CpFaKPUN2IA/VO2RcI4RB8I/AAAAAAAAAH4/rI4CFDmB5Oc/w1011-h1015-no/IMG_20141111_130535.jpg> ;
+              foaf:mbox <mailto:halilaj@iai.uni-bonn.de> ;
+              foaf:familyName "Halilaj" ;
+              eis:room "A119" ;
+              foaf:phone "" ;
+              <dct:description> """Research and Technology Interests:
+
+- Ontology Engineering,
+- Linked Open Data,
+- Semantic Web and Technologies,
+- Software Engineering and Agile Methodologies. In particular modern UI
+
+
+Me Elsewhere
+==================
+<ul>
+<li>Social Networks: <a href=\"http://www.researchgate.net/profile/Lavdim_Halilaj\">ResearchGate</a>, <a href='https://www.linkedin.com/pub/lavdim-halilaj/22/b15/843' rel='nofollow'>LinkedIn</a>
+</li>
+</ul>""" .
+
+people:Mohamed_Nadjib_Mami a foaf:Person ;
+                           rdfs:label "Mohamed Nadjib Mami" ;
+                           foaf:name "Mohamed Nadjib MAMI" ;
+                           foaf:homepage "" ;
+                           dcterms:description """Research and Technology Interests
+============================
+- Heterogeneous Databases
+- (Big) Data Management
+- Semantic Web and Linked Data
+
+
+Current Activities
+=============
+- Building / deploying [Big Data Europe](http://big-data-europe.eu \"Big Data Europe Project\") platform
+- Building / administrating [Big Data Value Association](http://bdva.eu \"Big Data Value Association\") website
+- Writing papers :)
+
+
+Education
+========
+- Doctoral Studies \"Semantic Web & Big Data\": [EIS Bonn University](http://eis.iai.uni-bonn.de/ \"Enterprise Information Systems\") & [IAIS Fraunhofer](http://eis.iai.uni-bonn.de/Mohamed_Nadjib_Mami.html \" Fraunhofer-Insitute for Intelligent Analysis and Information Systems\") - Bonn, Germany (current)
+- Master's Degree \"Intelligent Systems\": Paris Dauphine University - Paris, France
+- Master's Degree \"Software Engineering\": Saad Dahlab University - Blida, Algeria
+- Bachelor's Degree \"Computer Science\": Saad Dahlab University - Blida, Algeria
+
+
+Professional Experience
+===================
+- Intern \"Object-Non-Relational Mapping, Meta-Modeling, NOSQL Databases esp. Graph\": KamricSoft - France
+- Web Developer \"E-commerce websites\": Kadik2i - Algeria and France
+
+
+Honors and Awards
+===============
+- Best Mini-project in SSSW15 Summer School - 2015, Italy (team award)
+- Second Award of \"Forum National des Etudiants en Informatique\" (FNEI) - 2011, Algeria
+
+
+Me Elsewhere
+============
+- Portfolio and blogging: [Strinking](http://mohamed-nadjib-mami.strikingly.com \"Strikingly\") - [Meduim](https://medium.com/@MohamedNadjMAMI \"Medium.com\")
+- Social Networks: [LinkedIn](https:/linkedin.com/in/mohamednadjibmami \"LinkedIn\") - [Twitter](https://twitter.com/MohamedNadjMAMI \"Twitter\") - [Flickr](https://www.flickr.com/photos/mohamed-nadjib-mami/ \"Flickr\")
+- Content repositories: [GitHub](https://github.com/mnmami \"GitHub\")"""^^sysont:Markdown ;
+                           skos:hiddenLabel "MohamedNadjibMami" ;
+                           foaf:currentProject projects:BigDataEurope ;
+                           foaf:depiction <https://fascww.bn1301.livefilestore.com/y2pH-PcQZXW5XDUFfVyvh5izNG7xejz9PkfnLLKaW4ztbUox0x7IQAdxKVi3c3XwitM5GdihgEd0j-uTMN3uaAVTxs707ep_C4ZnGJtcQa2_xyiLZ4-YfpEP4WybkPA7-CZ0kIZKAX0kALzTs7sxw6kuw/Profile3.jpg?psid=1> ;
+                           foaf:mbox <mailto:mami@iai.uni-bonn.de> ;
+                           foaf:phone <tel:+49-1575-84-82-232> ;
+                           foaf:familyName "Mami" ;
+                           eis:room "A119 (Uni Bonn at RömerStr. 164)" ;
+                           <dct:description> "<strong>Study</strong>" ;
+                           <site:content> "test <b>test</b>" .
+
+people:AlanTygel a foaf:Person ;
+                 rdfs:label "AlanTygel" ;
+                 skos:prefLabel "Alan Tygel" ;
+                 foaf:name "Alan Tygel" ;
+                 foaf:homepage <http://cirandas.net/alantygel/site-academico> ;
+                 foaf:currentProject projects:OpenBudgets ;
+                 foaf:depiction <http://cirandas.net/thumbnails/0029/5980/alan_ihu_menor_display.jpg> ;
+                 foaf:mbox <mailto:alantygel@ppgi.ufrj.br> ;
+                 foaf:familyName "Tygel" ;
+                 eis:room "A110a" .
+
+people:Farah_Karim a foaf:Person ;
+                   rdfs:label "Farah Karim" ;
+                   foaf:name "Farah Karim" ;
+                   skos:hiddenLabel "Farah Karim" ;
+                   foaf:homepage "" ;
+                   foaf:currentProject projects:OpenAIRE2020 ;
+                   foaf:mbox <mailto:10msitfkarim@seecs.edu.pk> ;
+                   foaf:phone <tel:+4915218815243> ;
+                   foaf:familyName "Karim" ;
+                   eis:room "A110a" .
+
+people:Diego_Collarana a foaf:Person ;
+                       rdfs:label "Diego Collarana" ;
+                       skos:prefLabel "Diego Collarana" ;
+                       foaf:name "Diego Collarana" ;
+                       foaf:homepage <https://www.linkedin.com/pub/diego-collarana/27/b61/60a> ;
+                       skos:hiddenLabel "Diego Collarana" ;
+                       foaf:currentProject projects:LiDaKrA ;
+                       foaf:depiction <https://media.licdn.com/media/p/4/000/13e/336/35bb4dc.jpg> ;
+                       foaf:mbox <mailto:collaran@iai.uni-bonn.de> .
+
+people:DaryaTarasowa a foaf:Person ;
+                     skos:prefLabel "Darya Tarasowa" ;
+                     foaf:name "Darya Tarasowa" ;
+                     foaf:homepage "" ;
+                     site:templateOption "minimal" ;
+                     foaf:currentProject projects:SlideWiki, projects:EDSA ;
+                     foaf:depiction <https://lh4.googleusercontent.com/-l59kLILg-uA/T1HrKlFxiwI/AAAAAAAABzM/2evmF9t8Hk8/w789-h787-no/IMG_6159.JPG> ;
+                     foaf:mbox <mailto:darya.tarasowa@gmail.com> ;
+                     foaf:familyName "Tarasowa" ;
+                     eis:publicationTag "tarasowa" ;
+                     eis:room "A110a" .
+
+people:SarvenCapadisli a foaf:Person ;
+                       rdfs:seeAlso <http://csarven.ca/cv> ;
+                       owl:sameAs <http://csarven.ca/#i> ;
+                       foaf:name "Sarven Capadisli" ;
+                       foaf:homepage <http://csarven.ca/> ;
+                       sioc:feed <http://csarven.ca/atom> ;
+                       foaf:depiction <http://csarven.ca/media/images/sarven-capadisli.jpg> ;
+                       foaf:mbox <mailto:info@csarven.ca> ;
+                       foaf:familyName "Capadisli" .
+
+people:SoerenAuer a foaf:Person ;
+                  skos:prefLabel "Prof. Dr. Sören Auer" ;
+                  foaf:name "Sören Auer" ;
+                  foaf:homepage '' ;
+                  dcterms:description """Sören heads the Enterprise Information Systems group at the computer science department at University of Bonn. He is also member of the leadership council of <a href=\"http://www.iais.fraunhofer.de\">Fraunhofer-Insitute for Intelligent Analysis and Information Systems (IAIS)</a> and scientific head of the Fraunhofer IAIS department <a href=\"http://www.iais.fraunhofer.de/ok.html\">Organized Knowledge</a>. Before joining University of Bonn and Fraunhofer IAIS in 2013, Sören founded <a href=\"http://aksw.org\">AKSW research group</a> at University of Leipzig and worked at TU Chemnitz as well as University of Pennsylvania.
+
+<div class=\"demowheel\"><ul>
+<li class=\"odd\">
+<h2 class=\"demowheel-title\"><a href='http://videolectures.net/dataforum2014_panel_big_data/'>Executive Panel on Big Data at European Data Forum</a></h2>
+<a class=\"demowheel-image\" href='http://videolectures.net/dataforum2014_panel_big_data/'>  <img src='http://videolectures.net/dataforum2014_panel_big_data/thumb.jpg' border=0/>
+  </a>
+</li>
+    <li class=\"even\">
+        <h2 class=\"demowheel-title\"><a href='http://www.forumspb.com/en/2013/sections/19/materials/190/sessions/398'>Panel on Open Data at Sankt Petersburg Economic Forum</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='http://www.forumspb.com/en/2013/sections/19/materials/190/sessions/398'><img alt=\"screenshot\" src=\"http://eis.iai.uni-bonn.de/upload/soeren-spb-forum.jpg\" /></a></li>
+
+    <li class=\"odd\">
+        <h2 class=\"demowheel-title\"><a href='http://videolectures.net/estc2010_auer_lod/'>Talk at European Semantic Technology Conference</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='http://videolectures.net/estc2010_auer_lod/'><img alt=\"screenshot\" src=\"http://videolectures.net/estc2010_auer_lod/thumb.jpg\" /></a></li>
+    <li class=\"even\">
+        <h2 class=\"demowheel-title\"><a href='http://www.forumspb.com/en/2013/sections/19/materials/190/sessions/398'>Transparency through Open Data at SPB International Economic Forum</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='http://www.forumspb.com/en/2013/sections/19/materials/190/sessions/398'><img alt=\"screenshot\" src=\"http://eis.iai.uni-bonn.de/upload/soeren-spb-forum1.jpg\" /></a></li>
+    <li class=\"odd\">
+        <h2 class=\"demowheel-title\"><a href='http://www.deutschlandfunk.de/big-data-daten-die-nur-gutes-tun-sollen.684.de.html?dram:article_id=312291'>Interview about societal perspectives of Big Data Technologies</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='http://www.deutschlandfunk.de/big-data-daten-die-nur-gutes-tun-sollen.684.de.html?dram:article_id=312291'><img alt=\"screenshot\" src=\"http://www.deutschlandfunk.de/media/files/6/698f8a2936502bb5591da9964990ad6dv1.jpg\" /></a></li>
+    <li class=\"even\">
+        <h2 class=\"demowheel-title\"><a href='https://www.youtube.com/watch?v=WYsvXrx1Ilg'>Linked Enterprise Data talk at WSU</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='https://www.youtube.com/watch?v=WYsvXrx1Ilg'><img alt=\"screenshot\" src=\"https://i.ytimg.com/vi/WYsvXrx1Ilg/mqdefault.jpg\" /></a></li>
+    <li class=\"odd\"><h2 class=\"demowheel-title\"><a href='https://www.youtube.com/watch?v=e0Z11w_Kb4c'>KESW keynote \"The Emerging Web of Data\"</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='https://www.youtube.com/watch?v=e0Z11w_Kb4c'><img alt=\"screenshot\" src=\"https://i.ytimg.com/vi/e0Z11w_Kb4c/mqdefault.jpg\" /></a></li>
+
+    <li class=\"even\"><h2 class=\"demowheel-title\"><a href='https://www.youtube.com/watch?v=r6cPQGij5Wo'>Webinar on OpenCourseWare authoring with SlideWiki</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='https://www.youtube.com/watch?v=r6cPQGij5Wo'><img alt=\"screenshot\" src=\"https://i.ytimg.com/vi/r6cPQGij5Wo/mqdefault.jpg\" /></a></li>
+
+    <li class=\"odd\"><h2 class=\"demowheel-title\"><a href='http://videolectures.net/wims2011_auer_interlinked/'>Keynote on Linked Data at Conference on Web Intelligence, Mining and Semantics (WIMS)</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='http://videolectures.net/wims2011_auer_interlinked/'><img alt=\"screenshot\" src=\"http://videolectures.net/wims2011_auer_interlinked/thumb.jpg\" /></a></li>
+
+    <li class=\"even\"><h2 class=\"demowheel-title\"><a href='https://vimeo.com/76257120'>TPDL Keynote What can Linked Data do for Digital Libraries?</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='https://vimeo.com/76257120'><img alt=\"screenshot\" src=\"https://i.vimeocdn.com/video/451010164_590x332.webp\" /></a></li>
+
+    <li class=\"odd\"><h2 class=\"demowheel-title\"><a href='https://vimeo.com/41772587'>Semantic Data Web at Publishers' Forum</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='https://vimeo.com/41772587'><img alt=\"screenshot\" src=\"https://i.vimeocdn.com/video/289506059_590x332.webp\" /></a></li>
+
+    <li class=\"even\"><h2 class=\"demowheel-title\"><a href='http://ercim-news.ercim.eu/en96'>ERCIM News 96 Linked Open Data</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='http://ercim-news.ercim.eu/en96'><img alt=\"screenshot\" src=\"http://ercim-news.ercim.eu/images/stories/EN96/cover.jpg\" /></a></li>
+
+    <li class=\"odd\"><h2 class=\"demowheel-title\"><a href='http://www.springer.com/us/book/9783642302732'>Springer Book Linked Enterprise Data</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='http://www.springer.com/us/book/9783642302732'><img alt=\"screenshot\" src=\"https://images.springer.com/sgw/books/medium/9783642302732.jpg\" /></a></li>
+
+    <li class=\"even\"><h2 class=\"demowheel-title\"><a href='http://www.springer.com/us/book/9783319098456'>Springer Book Linked Open Data</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='http://www.springer.com/us/book/9783319098456'><img alt=\"screenshot\" src=\"https://images.springer.com/sgw/books/medium/9783319098456.jpg\" /></a></li>
+
+</ul>
+</div>
+
+Research and Technology Interests
+==================
+
+- Semantic Web technologies and Linked Data
+- Knowledge Representation and Management, in particular agile, light-weight methodologies and social semantic collaboration
+- Software engineering, open-source software and adaptive methodologies and tools
+- Database and XML technologies
+- Open, participatory research and development (see my Open Science slides and OpenResearch.org)
+- Application domains: enterprise data integration, cyber-physical systems, smart cities, digital humanities
+
+
+Current Activities
+==================
+<ul>
+<li>Member of the leadership council of <a href=\"http://www.iais.fraunhofer.de\">Fraunhofer-Insitute for Intelligent Analysis and Information Systems (IAIS)</a> and scientific head of the Fraunhofer IAIS department <a href=\"http://www.iais.fraunhofer.de/ok.html\">Organized Knowledge</a></li>
+<li>Coordinator of <a href=\"http://www.big-data-europe.eu\">H2020 BigDataEurope - Empowering Communities with Big Data Technologies</a></li>
+<li>Co-chair of the steering committee of the <a href=\"http://data-forum.eu\">European Data Forum</a></li>
+<li>Founding member (representative of Fraunhofer society) of the board of directors of <a href=\"http://bdva.eu/\">Big Data Value Association</a></li>
+<li>Founder (resp. co-founder) and collaborator of a number of high-impact research and community projects, e.g.: <a href='http://slidewiki.aksw.org'>SlideWiki</a> (crowd-sourcing of educational content creation), <a href='http://DBpedia.org'>DBpedia.org</a> (transforming Wikipedia into a knowledge base), <a href='http://linkedgeodata.org'>LinkedGeoData.org</a> (spatial semantic data repository).</li>
+<li><a href='http://okfn.org'>Open Knowledge Foundation</a> - Protecting and Promoting Open Knowledge in a Digital Age (advisory board member)</li>
+<li>Member of the <a href=\"http://www.w3.org/2013/12/dacg-charter.html\">W3C Data Activity Coordination Group (DACG)</a></li>
+<li>Editor in Chief of <a href='http://www.ijswis.org'>Journal of Semantic Web and Information Systems</a>, editorial board member of various journals (<a href='http://www.semantic-web-journal.net'>Semantic Web Journal</a>, <a href='http://www.rintonpress.com/journals/jwe/'>Journal of Web Engineering</a>)
+</li>
+<li>Scientific advisor to the AKSW/LOD2 spin-off company <a href=\"http://eccenca.com\">eccenca GmbH</a></li>
+</ul>
+
+Former Activities
+==================
+<ul>
+<li>Coordinator of the EU-FP7-ICT IP project <a href='http://lod2.eu'>LOD2 - Creating Knowledge out of Interlinked Data</a></li>
+<li>Founder and head of <a href='http://aksw.org'>AKSW Research group</a> at University of Leipzig</li>
+<li>Principle investigator for the funded research projects <a href='http://ontowiki.eu'>OntoWiki</a> (EU-FP7-SME) and <a href='http://le4sw.de'>LE4SW</a> (BmBF)
+</li><li>Programme committee co-chair of: <a href='http://www2012.wwwconference.org/?page_id=1569'>WWW 2012</a>, <a href='http://icwe2011.webengineering.org'>ICWE 2011</a>, <a href='http://www.eswc2012.org'>ESWC 2012</a>, <a href='http://wiki.okfn.org/okcon/2010/'>OKCon 2010</a>, I-Semantics 2008
+</li><li>Programme committee member of conferences and workshops, e.g.: <a href='http://www.icde12.org'>ICDE2012</a>, <a class='urllink' href='http://www2013.org'>WWW 2013</a>, <a href='http://iswc2012.semanticweb.org/'>ISWC 2012</a>, <a href='http://2013.eswc-conferences.org/'>ESWC 2013</a>, <a href='http://www.ieee-icsc.org/'>IEEE-ICSC 2011</a> (see <a href='http://www.informatik.uni-leipzig.de/~auer/index.php?n=Main.Events'>Events</a>)
+</li><li>Director of academic master studies program “Content- and Media Engineering” at <a href='http://leipzigschoolofmedia.de'>Leipzig School of Media</a>
+</li><li><a href='http://www.w3.org/2001/sw/rdb2rdf/'>W3C's RDB2RDF Working Group</a> (invited expert)
+</li><li><a href='http://cordis.europa.eu/fp7'>EU's 6th and 7th framework programs</a> (evaluator and reviewer)
+</li>
+<li>Supervision of doctoral students: <a href='http://bis.informatik.uni-leipzig.de/SebastianTramp'>Sebastian Tramp</a>, <a href='http://bis.informatik.uni-leipzig.de/SebastianHellmann'>Sebastian Hellmann</a>, <a href='http://bis.informatik.uni-leipzig.de/MichaelMartin'>Michael Martin</a>, <a href='http://bis.informatik.uni-leipzig.de/JoergUnbehauen'>Jörg Unbehauen</a>, <a href='http://bis.informatik.uni-leipzig.de/PhilippFrischmuth'>Philipp Frischmuth</a>, <a href='http://aksw.org/AliKhalili'>Ali Khalili</a>, <a href='http://bis.informatik.uni-leipzig.de/TimofeyErmilov'>Timofey Ermilov</a>, <a href='http://bis.informatik.uni-leipzig.de/MohamedMorsey'>Mohamed Morsey</a>, <a href='http://bis.informatik.uni-leipzig.de/ClausStadler'>Claus Stadler</a>, <a href='http://bis.informatik.uni-leipzig.de/SaeedehShekarpour'>Saeedeh Shekarpour</a>, <a href='http://bis.informatik.uni-leipzig.de/AmrapaliZaveri'>Amrapali J. Zaveri</a>
+</li><li>Collaboration with: <a href='http://jens-lehmann.org/' rel='nofollow'>Jens Lehmann</a> (AKSW MOLE), <a href='http://bis.uni-leipzig.de/AxelNgonga'>Axel-Cyrille Ngonga Ngomo</a> (AKSW SIMBA)
+</li><li>Invited speaker at: <a href='http://www.lrec-conf.org/lrec2012/'>LREC 2012</a>, <a href='http://www.sbbd-webmedia2011.inf.ufsc.br/sbbd/index.php/en'>SBBD 2011</a>, <a href='http://reasoningweb.org/2011/'>ReWeb 2011</a>, <a href='http://bis.kie.ae.poznan.pl/14th_bis/'>BIS 2011</a>, <a href='http://www.consegi.gov.br/?set_language=en'>CONSEGI 2011</a>, <a href='http://wims.vestforsk.no/'>WIMS 2011</a>, <a href='http://iswsa.ipu.edu.jo/'>ISWSA 2011</a>, <a href='http://www.eswc2010.org'>ESWC 2010</a>
+</li></ul><div class='vspace'></div>
+
+Publications
+==================
+
+<div class=\"demowheel\"><ul>
+    <li class=\"odd\"><h2 class=\"demowheel-title\"><a href='http://ercim-news.ercim.eu/en96'>ERCIM News 96 Linked Open Data</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='http://ercim-news.ercim.eu/en96'><img alt=\"screenshot\" src=\"http://ercim-news.ercim.eu/images/stories/EN96/cover.jpg\" /></a></li>
+
+    <li class=\"even\"><h2 class=\"demowheel-title\"><a href='http://www.springer.com/us/book/9783642302732'>Springer Book Linked Enterprise Data</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='http://www.springer.com/us/book/9783642302732'><img alt=\"screenshot\" src=\"https://images.springer.com/sgw/books/medium/9783642302732.jpg\" /></a></li>
+
+    <li class=\"odd\"><h2 class=\"demowheel-title\"><a href='http://www.springer.com/us/book/9783319098456'>Springer Book Linked Open Data</a> <span class=\"hookline\"></span></h2>
+<a class=\"demowheel-image\" href='http://www.springer.com/us/book/9783319098456'><img alt=\"screenshot\" src=\"https://images.springer.com/sgw/books/medium/9783319098456.jpg\" /></a></li>
+
+</ul>
+</div>
+
+
+Please check out the <a href=\"http://eis.iai.uni-bonn.de/Publications\">publications section</a> as well as my <a href='http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Auer:S=ouml=ren.html'>DBLP</a> and <a href='http://scholar.google.com/citations?user=2cpal78AAAAJ'>Google Scholar</a> profiles.
+
+Secretary
+==================
+If you need me to sign something, for directions, visiting arrangements etc. please contact:
+<table><tr>
+<td>At **University of Bonn**:<br />
+<a href=\"http://wob.iai.uni-bonn.de/Wob/en/view/class217_id221.html\">Martina Doelp</a><br />
+Phone: +49 (228) 73-4501 <br />
+Fax: +49 (228) 73-4382 <br />
+Email: <a href=\"mailto:martina@iai.uni-bonn.de\">martina@iai.uni-bonn.de</a><br />
+Office: A206
+</td>
+<td>At **Fraunhofer IAIS**:<br />
+<a href=\"http://www.iais.fraunhofer.de/886.html\">Daniela Börner</a><br />
+Phone: +49 (2241) 14-3448<br />
+Fax: +49 (2241) 14-43448<br />
+Email: <a href=\"mailto:daniela.boerner@iais.fraunhofer.de\">daniela.boerner@iais.fraunhofer.de</a><br />
+Office:
+</td>
+</tr></table>
+For press inquiries regarding the projects I'm involved you can also contact Fraunhofer IAIS PR officer <a href=\"http://www.iais.fraunhofer.de/berkler.html\">Katrin Berkler</a>.
+
+Me Elsewhere
+==================
+
+<ul>
+<li>Other websites: <a href=\"http://www.iais.fraunhofer.de/auer.html\">Fraunhofer IAIS</a> and former websites: <a href=\"http://www.informatik.uni-leipzig.de/~auer/\">Uni Leipzig</a>
+
+<li>Bibliographic databases: <a href='http://www.informatik.uni-trier.de/~ley/db/indices/a-tree/a/Auer:S=ouml=ren.html'>DBLP</a>, <a href='http://academic.research.microsoft.com/Author/3535385.aspx'>Microsoft Academic Search</a>, <a href='http://scholar.google.com/citations?user=2cpal78AAAAJ'>Google Scholar</a>
+</li>
+
+<li>Social Networks: <a href=\"https://www.researchgate.net/profile/Soeren_Auer\">ResearchGate</a>, <a href='http://www.linkedin.com/in/soerenauer' rel='nofollow'>LinkedIn</a>, <a href='http://www.xing.com/profile/Soeren_Auer'>XING</a>, <a href=\"https://twitter.com/SoerenAuer\">Twitter</a>, <a href='http://www.facebook.com/soren.auer'>Facebook</a>
+</li>
+
+<li>Content repositories: <a href='http://videolectures.net/soren_auer/'>Videolectures</a>, <a href='http://www.slideshare.net/soeren1611'>Slideshare</a>, <a href=\"https://github.com/soeren1611\">GitHub</a>, <a href='http://sourceforge.net/users/soerenauer'>Sourceforge</a>
+</li></ul>"""^^sysont:Markdown ;
+                  sioc:feed <http://enterpriseinformationsystems.wordpress.com/feed/> ;
+                  site:templateOption "minimal" ;
+                  ov:businessCard <http://eis.iai.uni-bonn.de/vCard/Bonn> ;
+                  skos:hiddenLabel "SoerenAuer" ;
+                  foaf:currentProject projects:iRap, projects:LiDaKrA, projects:VoCol ;
+                  foaf:depiction <http://eis.iai.uni-bonn.de/upload/Soeren_Auer.jpg> ;
+                  foaf:mbox <mailto:auer@cs.uni-bonn.de> ;
+                  foaf:phone <tel:+49-228-73-7816> ;
+                  foaf:familyName "Auer" ;
+                  eis:publicationTag "auer" ;
+                  eis:room """A117, University of Bonn,
+Computer Science/EIS,
+Römerstr. 164,
+53117 Bonn, Germany<br />
+Room B3-219, Fraunhofer IAIS,
+Schloss Birlinghoven,
+53757 Sankt Augustin""" ;
+                  <schema:location> "Römerstr. 164" ;
+                  <site:content> "Test" .
+
+people:SaeedehShekarpour a foaf:Person ;
+                         rdfs:label "Dr. Saeedeh Shekarpour" ;
+                         rdfs:seeAlso <https://www.linkedin.com/nhome/> ;
+                         skos:prefLabel "Dr. Saeedeh Shekarpour" ;
+                         foaf:name "Saeedeh Shekarpour" ;
+                         foaf:homepage "" ;
+                         dcterms:description """<H1> Research Area </H1>
+
+I am interested in pursuing advanced research in the following fields:
+
+- Question Answering
+- Semantic Search
+- Semantic Web
+- Information Retrieval
+- Statistical Methods
+- Web Mining
+
+<H1> Selected Talks </H1>
+- <b>IBM Research Center</b> (Watson project-DeepQA), New York, USA, December 2013.
+- <b>World Wide Web Conference</b> (WWW2013), Rio de Janeiro, Brazil, May 2013.
+- <b>Joint International Semantic Technology Conference</b> (JIST2012), Nara, Japan, December 2012.
+- <b>International Semantic Web Conference</b> (ISWC2011), Bonn, Germany, October 2011.
+- <b>Web Intelligence Conference</b> (WI2011), Lyon, France, August 2011.
+
+You can find some of my slides <a href=\"http://www.slideshare.net/shekarpour\"> here </a>.
+
+<H1>Publications </H1>
+You can find the list of my publications on:
+- <b><a href=\"http://dblp.uni-trier.de/pers/hd/s/Shekarpour:Saeedeh\">dblp </a></b>
+- <b><a href=\"https://scholar.google.de/citations?user=Q1j-Kv4AAAAJ&hl=en\">Google Scholar</a> </b>
+- <b><a href=\"https://www.researchgate.net/profile/Saeedeh_Shekarpour2\">Research Gate </a></b>
+
+<H1> Education </H1>
+- PhD.  Institute for Applied Computer Science at Bonn University, Bonn, Germany.
+- PhD. AKSW research group, Institute of Computer Science(IfI) of Leipzig University, Germany.
+- M.Sc. in Computer Engineering(Software), Department of Computer Science and Engineering, School of Engineering, Shiraz University, Shiraz, Iran.
+- B.Sc. in Computer Engineering(Software), Department of Electronic and Computer Engineering, Shahid Beheshti University, Tehran, Iran."""^^sysont:Markdown ;
+                         site:templateOption "minimal" ;
+                         skos:hiddenLabel "SaeedehShekarpour" ;
+                         foaf:currentProject projects:SINA, projects:WDAqua_ITN ;
+                         foaf:depiction <https://dl.dropboxusercontent.com/u/28799199/meriva.jpg> ;
+                         foaf:mbox <mailto:shekarpour*at*uni-bonn.de> ;
+                         foaf:phone <tel:+49-228-73-4697> ;
+                         foaf:familyName "Shekarpour" ;
+                         eis:publicationTag "shekarpour" ;
+                         eis:room "A110a, University of Bonn, Computer Science/EIS, Römerstr. 164, 53117 Bonn, Germany" .
+
+people:JyunYao_Huang a foaf:Person ;
+                     rdfs:label "Jyun-Yao Huang" ;
+                     skos:prefLabel "Jyun-Yao Huang" ;
+                     foaf:name "Jyun-Yao Huang" ;
+                     foaf:homepage <http://blog.allenworkspace.net> ;
+                     foaf:currentProject projects:OpenAIRE2020 ;
+                     foaf:depiction <http://www.allenworkspace.net/Profile.jpg> ;
+                     foaf:mbox <mailto:allen501pc@gmail.com> ;
+                     foaf:familyName "Huang" ;
+                     eis:room "A110a" .
+
+people:Goekhan_Coskun a foaf:Person ;
+                      rdfs:label "Dr. Gökhan Coskun" ;
+                      skos:prefLabel "Dr. Gökhan Coskun" ;
+                      foaf:name "Gökhan Coskun" ;
+                      foaf:homepage <http://www.coskun.org/gokhan> ;
+                      foaf:depiction <https://media.licdn.com/mpr/mpr/shrinknp_200_200/p/1/000/106/324/2a24fed.jpg> ;
+                      foaf:mbox <mailto:coskun@iai.uni-bonn.de> ;
+                      foaf:phone "" ;
+                      eis:room "" .
+
+people:Steffen_Lohmann a foaf:Person ;
+                       rdfs:label "Dr. Steffen Lohmann" ;
+                       rdfs:seeAlso <http://steffen-lohmann.de/> ;
+                       owl:sameAs <http://steffen-lohmann.de/> ;
+                       skos:prefLabel "Dr. Steffen Lohmann" ;
+                       foaf:name "Steffen Lohmann" ;
+                       foaf:homepage <http://steffen-lohmann.de/> ;
+                       site:templateOption "minimal" ;
+                       skos:hiddenLabel "Steffen Lohmann" ;
+                       foaf:currentProject projects:SlideWiki ;
+                       foaf:depiction <http://www.vis.uni-stuttgart.de/~lohmansn/steffen.png> ;
+                       foaf:mbox <mailto:steffen.lohmann@iais.fraunhofer.de> ;
+                       foaf:phone <tel:+492241143021> ;
+                       foaf:familyName "Lohmann" ;
+                       eis:publicationTag "lohmann" ;
+                       eis:room "C1-203, Fraunhofer IAIS, Schloss Birlinghoven, 53757 Sankt Augustin" .
+
+people:Irlan a foaf:Person ;
+             rdfs:label "Irlan Grangel-González" ;
+             rdfs:seeAlso <https://de.linkedin.com/pub/irlán-grangel-gonzález/39/661/517> ;
+             skos:prefLabel "Irlan Grangel-González" ;
+             foaf:homepage "" ;
+             foaf:name "Irlan Grangel-González" ;
+             dcterms:description """<H1> Research Interest </H1>
+
+I am interested in pursuing advanced research in the following fields:
+
+Industry 4.0 </br>
+Linked Data Integration </br>
+Semantic Web </br>
+Collaborative Vocabulary Engineering </br>
+Statistical Methods </br>"""^^sysont:Markdown ;
+             foaf:currentProject projects:LUCID ;
+             foaf:depiction <https://lh4.googleusercontent.com/-kUk1n0yC4z4/VO3W4PHPWVI/AAAAAAAAAOA/UkMTUXvgwj4/s520-no/mine.jpg> ;
+             foaf:mbox <mailto:grangel@iai.uni-bonn.de> ;
+             foaf:familyName "Grangel-González" .
+
+people:DietlandZuehlke a foaf:Person ;
+                       rdfs:label "Dr. Dietlind Zühlke" ;
+                       foaf:name "Dr. Dietlind Zühlke" ;
+                       foaf:depiction <https://media.licdn.com/mpr/mpr/shrink_200_200/p/1/005/08e/1bf/02d4dd7.jpg> ;
+                       foaf:mbox <mailto:dietlind.zuehlke@iais.fraunhofer.de> ;
+                       foaf:homepage "" ;
+                       foaf:familyName "Zühlke" .
+
+people:SidraFaisal a foaf:Person ;
+                   rdfs:label "Sidra Faisal" ;
+                   foaf:name "Sidra Faisal" ;
+                   foaf:currentProject projects:iRap ;
+                   foaf:homepage "" ;
+                   foaf:familyName "Faisal" .
+
+people:StefanLuettringhausKappel a foaf:Person ;
+                                 rdfs:label "Dr. Stefan Lüttringhaus-Kappel" ;
+                                 skos:prefLabel "Dr. Stefan Lüttringhaus-Kappel" ;
+                                 foaf:name "Stefan Lüttringhaus-Kappel" ;
+                                 foaf:mbox <mailto:stefan@iai.uni-bonn.de> ;
+                                 foaf:homepage "" ;
+                                 foaf:phone <tel:+49-(228)-73-4536> ;
+                                 foaf:familyName "Lüttringhaus-Kappel" ;
+                                 eis:room "A209" .
+
+people:NiklasPetersen a foaf:Person ;
+                      skos:prefLabel "Niklas Petersen" ;
+                      foaf:name "Niklas Petersen" ;
+                      dcterms:description """
+Research and Technology Interests
+==================
+<ul>
+<li>Semantic Web Tools</li>
+<li>Ontology Engineering</li>
+<li>Open Transport</li>
+</ul>"""^^sysont:Markdown ;
+                      skos:hiddenLabel "NiklasPetersen" ;
+                      foaf:currentProject projects:VoCol ;
+                      foaf:depiction <https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAADyAAAAJDNiYmM2M2NjLTFhZTItNDAxMi05N2NiLWU5ZjRjZTExZTJhZA.jpg> ;
+                      foaf:mbox <mailto:petersen*at*cs.uni-bonn.de> ;
+                      foaf:homepage "" ;
+                      foaf:familyName "Petersen" ;
+                      eis:room "A118" .
+
+people:JeremyDebattista a foaf:Person ;
+                        skos:prefLabel "Jeremy Debattista" ;
+                        foaf:name "Jeremy Debattista" ;
+                        site:templateOption "minimal" ;
+                        foaf:currentProject projects:Diachron ;
+                        foaf:depiction <https://media.licdn.com/media/p/2/000/0de/2b9/2d30505.jpg> ;
+                        foaf:mbox <mailto:jeremy.debattista@iais-extern.fraunhofer.de>, <mailto:debattist@informatik.uni-bonn.de> ;
+                        foaf:homepage "" ;
+                        foaf:familyName "Debattista" ;
+                        eis:publicationTag "debattista" ;
+                        eis:room "A110a" .
+
+people:Matthew_English a foaf:Person ;
+                       rdfs:label "Matthew English" ;
+                       skos:prefLabel "Matthew English" ;
+                       foaf:name "Matthew English" ;
+                       foaf:currentProject projects:ODINE ;
+                       foaf:mbox <mailto:english@informatik.uni-bonn.de> ;
+                       foaf:homepage "" ;
+                       foaf:depiction <http://eis.iai.uni-bonn.de/upload/thumbnails/matthew.jpg> .
+
+people:Fahrettin_Goekgoez a foaf:Person ;
+                          rdfs:label "Fahrettin Gökgöz" ;
+                          skos:prefLabel "Fahrettin Gökgöz" ;
+                          foaf:name "Fahrettin Gökgöz" ;
+                          foaf:homepage "" ;
+                          foaf:currentProject projects:OpenBudgets ;
+                          foaf:depiction <https://media.licdn.com/media/p/1/005/037/061/3954c27.jpg> .
+
+people:Ashwini_Jaya_Kumar a foaf:Person ;
+                          rdfs:label "Ashwini Jaya Kumar" ;
+                          foaf:name "Ashwini Jaya Kumar" ;
+                          foaf:depiction <https://media.licdn.com/media/p/2/005/0b0/208/29f9ed5.jpg> .
+
+people:Michael_Galkin a foaf:Person ;
+                      rdfs:label "Michael Galkin" ;
+                      skos:prefLabel "Michael Galkin" ;
+                      foaf:name "Michael Galkin" ;
+                      foaf:currentProject projects:Linda, projects:LinkDaViz ;
+                      foaf:depiction <https://lh5.googleusercontent.com/-xIRPKH7PQCo/UyYRNMKa58I/AAAAAAAAAJM/mhu6Q9HpHUo/w278-h280-p/1.jpg> ;
+                      foaf:mbox <mailto:galkin@eis.iai.uni-bonn.de> ;
+                      foaf:homepage "" ;
+                      foaf:familyName "Galkin" .
+
+people:Elisa_Margareth_Sibarani a foaf:Person ;
+                                rdfs:label "Elisa Margareth Sibarani" ;
+                                foaf:name "Elisa Margareth Sibarani" ;
+                                foaf:currentProject projects:EDSA ;
+                                foaf:depiction <https://media.licdn.com/media/p/8/005/0b4/145/0bc9834.jpg> ;
+                                foaf:mbox <mailto:sibarani@iai.uni-bonn.de>, <mailto:elisamargareth.sibarani@gmail.com> ;
+                                foaf:homepage "" ;
+                                foaf:familyName "Sibarani" ;
+                                eis:room "A110, University of Bonn, Computer Science/EIS, Römerstr. 164, 53117 Bonn, Germany" ;
+                                <schema:location> "University of Bonn, Computer Science/EIS, Römerstr. 164, 53117 Bonn, Germany" .
+
+people:Harsh_Thakkar a foaf:Person ;
+                     rdfs:label "Harsh Thakkar" ;
+                     skos:prefLabel "Harsh Thakkar" ;
+                     foaf:name "Harsh Thakkar" ;
+                     dcterms:description """About Me:
+==================
+
+I am a full-time Researcher in the Informatik III department of University of Bonn, Germany.  My current research interests are aligned with the EU funded project **WDAqua** which include _Quality assessment of open datasets for Question Answering_ and _Information retrieval_.
+
+ I completed my Post-graduation from National Institute of  Technology Surat [2013].  In my masters thesis I worked on \"Sentiment analysis for twitter using hybrid naive bayes\". I completed graduated from L. D. College of Engineering, Ahmedabad in Computer Engineering discipline [2011].
+
+[Google scholar page](scholar.google.co.in/citations?user=Rq0eahkAAAAJ&hl=en \"Google Scholar page\")
+
+You can find more information on my [personal webspace](http://harshthakkar.in \"webspace\") """^^sysont:Markdown, """About Me:
+==================
+
+I am a full-time Researcher in the Informatik III department of University of Bonn, Germany.  My current research interests are aligned with the EU funded project **WDAqua** which include _Quality assessment of open datasets for Question Answering_ and _Information retrieval_.
+
+ I completed my Post-graduation from National Institute of  Technology Surat [2013].  My masters thesis titled \"Sentiment analysis for twitter using hybrid naive bayes\". I completed graduation from L. D. College of Engineering, Ahmedabad in Computer Engineering discipline [2011].
+
+[Google scholar page](scholar.google.co.in/citations?user=Rq0eahkAAAAJ&hl=en \"Google Scholar page\")
+
+You can find more information on my [personal webspace](http://harshthakkar.in \"webspace\") """^^sysont:Markdown ;
+                     foaf:homepage "http://harshthakkar.in/" ;
+                     foaf:currentProject projects:WDAqua_ITN ;
+                     foaf:depiction <https://lh3.googleusercontent.com/-p5SC5kivSWo/Uos1z_hLgzI/AAAAAAAABUw/cHq2Z18pRdw/w140-h139-p/Its%2BMe.jpg> ;
+                     foaf:mbox <mailto:hthakkar@uni-bonn.de> ;
+                     foaf:phone <tel:+49-151-45501359> ;
+                     eis:room "A110, University of Bonn, Computer Science/EIS, Römerstr. 164, 53117 Bonn, Germany" .
+
+people:SimonScerri a foaf:Person ;
+                   rdfs:seeAlso <https://www.linkedin.com/profile/view?id=14366104&trk=nav_responsive_tab_profile> ;
+                   owl:sameAs <https://www.researchgate.net/profile/Simon_Scerri?ev=hdr_xprf> ;
+                   skos:prefLabel "Dr. Simon Scerri" ;
+                   foaf:name "Simon Scerri" ;
+                   foaf:currentProject projects:iRap, projects:EDSA, projects:BigDataEurope ;
+                   foaf:depiction <https://dl.dropboxusercontent.com/u/53345423/profile2_small.png> ;
+                   foaf:mbox <mailto:scerri@iai.uni-bonn.de> ;
+                   foaf:homepage "" ;
+                   foaf:phone <tel:+492241143454> ;
+                   foaf:familyName "Scerri" ;
+                   eis:room "A118" .
+
+people:FabrizioOrlandi a foaf:Person ;
+                       rdfs:label "Fabrizio" ;
+                       rdfs:seeAlso <http://www.deri.ie/user/385/foaf.xml> ;
+                       owl:sameAs <http://www.deri.ie/users/fabrizio-orlandi> ;
+                       skos:prefLabel "Dr. Fabrizio Orlandi" ;
+                       foaf:name "Fabrizio Orlandi" ;
+                       foaf:currentProject projects:ExConQuer, projects:Linda, projects:iRap, projects:WDAqua_ITN, projects:LinkDaViz, projects:ODINE ;
+                       foaf:depiction <https://dl.dropboxusercontent.com/u/1490985/profile2013.png> ;
+                       foaf:mbox <mailto:orlandi@iai.uni-bonn.de> ;
+                       foaf:homepage "" ;
+                       foaf:phone <tel:+49228734504> ;
+                       foaf:familyName "Orlandi" ;
+                       eis:room "A119" .
+
+people:NataljaFriesen a foaf:Person ;
+                      rdfs:label "Natalja Friesen" ;
+                      skos:prefLabel "Natalja Friesen" ;
+                      foaf:currentProject people:Diachron ;
+                      foaf:mbox <mailto:natalja.friesen@iais-extern.fraunhofer.de>, <mailto:friesenn@informatik.uni-bonn.de> ;
+                      foaf:homepage "" ;
+                      foaf:phone <tel:02241-14-2788> ;
+                      foaf:familyName "Friesen" ;
+                      eis:room "A118" .
+
+people:KlaudiaThellmann a foaf:Person ;
+                        skos:prefLabel "Klaudia Thellmann" ;
+                        foaf:name "Klaudia Thellmann" ;
+                        site:templateOption "extended" ;
+                        foaf:currentProject projects:Linda ;
+                        foaf:depiction <https://www.dropbox.com/s/mmum3i4ksvqe2jb/ScanImage002.png?dl=1> ;
+                        foaf:mbox <mailto:klaudia.thellmann@iais.fraunhofer.de> ;
+                        foaf:homepage "" ;
+                        foaf:phone <tel:+49-(0)-2241-14-2451> ;
+                        foaf:familyName "Thellmann" ;
+                        eis:room """B3-212 Fraunhofer IAIS/UBONN
+Schloss Birlinghoven
+53754 Sankt Augustin, Germany
+""" .
+
+people:SaharVahdati a foaf:Person ;
+                    rdfs:label "M.Sc" ;
+                    rdfs:seeAlso <http://www.idb.uni-bonn.de/team/sahar-vahdati> ;
+                    skos:prefLabel "Sahar Vahdati" ;
+                    foaf:name "Sahar Vahdati" ;
+                    site:templateOption "minimal" ;
+                    foaf:currentProject projects:OpenAIRE2020, projects:OSCOSS, projects:OpenCourseWare_observatory ;
+                    foaf:depiction <https://lh6.googleusercontent.com/-1aYLlJkN9Gk/AAAAAAAAAAI/AAAAAAAAAB4/TpwtSZMguBk/photo.jpg> ;
+                    foaf:mbox <mailto:s6savahd@gmail.com> ;
+                    foaf:homepage "" ;
+                    foaf:phone <tel:+49228734533> ;
+                    foaf:familyName "Vahdati" ;
+                    eis:publicationTag "svahdati" ;
+                    eis:room "A210" .
+
+people:Denis_Lukovnikov a foaf:Person ;
+                        rdfs:label "Denis Lukovnikov" ;
+                        skos:prefLabel "Denis Lukovnikov" ;
+                        foaf:name "Denis Lukovnikov" ;
+                        foaf:currentProject projects:WDAqua_ITN ;
+                        foaf:depiction <https://dl.dropboxusercontent.com/u/25616277/cineme2mini.gif> .
+
+projects:OpenAIRE2020 a foaf:Project, eis:FundedProject ;
+                      rdfs:label "OpenAIRE2020" ;
+                      foaf:homepage "http://www.openaire.eu" ;
+                      dcterms:abstract "OpenAIRE2020 represents a pivotal phase in the long-term effort to implement and strengthen the impact of the Open Access policies of the European Commission, building on the achievements of the OpenAIRE projects.  OpenAIRE2020 will expand and leverage its focus from (1) the agents and resources of scholarly communication to workflows and processes, (2) from publications to data, software, and other research outputs, and the links between them, and (3) strengthen the relationship of European Open Access infrastructures with other regions of the world, in particular Latin America and the U.S. Through these efforts OpenAIRE2020 will truly support and accelerate Open Science and Scholarship, of which Open Access is of fundamental importance." ;
+                      foaf:logo <https://www.openaire.eu/images/site_images/OpenAIREplus_logo.png> ;
+                      doap:maintainer people:ChristophLange ;
+                      ns4:endDate "\"2018-06-30+12:00\"^^xsd:date" ;
+                      ns4:startDate "\"2015-01-01+12:00\"^^xsd:date" ;
+                      eis:hookline " manage and monitor the outcomes of European funded research." ;
+                      eis:status "Ongoing" ;
+                      site:content """<nav class=\"nav-sidelinks\">
+<ul>
+<li><strong class=\"headline\">[General description](#general)</strong></li>
+</ul>
+<ul>
+<li>[OpenAIRE LOD](#OpenAIRELOD)</li>
+</ul>
+</nav>
+OpenAIRE2020 represents a pivotal phase in the long-term effort to implement and strengthen the impact of the Open Access policies of the European Commission, building on the achievements of the OpenAIRE projects.  OpenAIRE2020 will expand and leverage its focus from (1) the agents and resources of scholarly communication to workflows and processes, (2) from publications to data, software, and other research outputs, and the links between them, and (3) strengthen the relationship of European Open Access infrastructures with other regions of the world, in particular Latin America and the U.S. Through these efforts OpenAIRE2020 will truly support and accelerate Open Science and Scholarship, of which Open Access is of fundamental importance.
+
+OpenAIRE2020 continues and extends OpenAIRE’s scholarly communication infrastructure to manage and monitor the outcomes of European funded research. It combines its substantial networking capacities and technical capabilities to deliver a robust infrastructure offering support for the Open Access policies in Horizon 2020, via a range of pan-European outreach activities and a suite of services for key stakeholders. It provides researcher support and services for the Open Data Pilot and investigates its legal ramifications. The project offers to national funders the ability to implement OpenAIRE services to monitor research output, whilst new impact measures for research are investigated. OpenAIRE2020 engages with innovative publishing and data initiatives via studies and pilots. By liaising with global infrastructures, it ensures international interoperability of repositories and their valuable Open Access contents.
+
+To ensure sustainability and long-term health for the overall OpenAIRE infrastructure, the proposed OpenAIRE2020 project will establish itself as a legal entity, which will manage the production-level responsibilities securing 24/7 reliability and continuity to all relevant user groups, data providers and other stakeholders.
+
+The University of Bonn contributes Linked Open Data services to the OpenAIRE infrastructure.
+
+<a name=\"OpenAIRELOD\"></a>
+First prototype of the OpenAIRE LOD
+------------------
+We implemented almost the whole OpenAIRE data model but so far output countries/languages/etc. as strings – should be DBpedia/lexvo etc. URIs.
+Based on our findings the OA consortium will decide about the final LOD infrastructure,
+and that then we’ll publish the data.
+A draft version of all OpenAIRE data in RDF format is available on [Zenodo](https://zenodo.org/ \"Zenodo\").
+Because of size limits for uploading files in Zenodo(Max 2 GB), we had to publish LOD of OpenAIRE in separated links, as follows:
+
+- [LOD Part 1](http://dx.doi.org/10.5281/zenodo.18319 \"lodpart1\")
+- [LOD Part 2](http://dx.doi.org/10.5281/zenodo.18321 \"lodpart2\")
+ """^^sysont:Markdown .
+
+projects:OSCOSS a foaf:Project, eis:FundedProject ;
+                rdfs:label "OSCOSS" ;
+                foaf:logo "" ;
+                dcterms:abstract "OSCOSS is concerned with Opening Scholarly Communication in the Social Sciences." ;
+                eis:partner ns19:GESIS ;
+                site:content """Scholarly communication in the social sciences is centered around publications, in which data also play a key role. The increasingly collaborative scientific process, from a project plan, to collecting data, to interpreting them in a paper and submitting it for peer review, to publishing an article, to, finally, its consumption by readers, is insufficiently supported by contemporary information systems. They support every individual step, but media discontinuities between steps cause inefficiency and loss of information: word processors lack direct access to data; reviewers cannot provide feedback inside the environment in which authors revising their papers; open access web publishing is constrained to document formats designed for paper printing but neglecting the Web's accessibility and interactivity potential; finally, readers, seeing a single frozen view of the underlying data in a paper, are unable to access the full extent of the data and to make observations beyond the restricted scope chosen by the author. Web technology can address these problems. Isolated solutions, such as tools for publishing data on the Web for easy retrieval and visualisation, exist in preliminary manifestations in the social sciences, but have not been integrated into tools for writing, reviewing and publishing articles. Tools that assist writers in making their documents' structure explicit for information systems, as well as document browsers that use articles as interactive interfaces to related information on the Web have been successfully deployed in the life sciences. We will transfer these ideas to the social sciences by integrating existing data and publication management services into a web-based collaborative writing environment that publishers can set up to supports all types of end users throughout the publication process: authors, reviewers and readers. With the collaborative document editor [Fidus Writer](http://www.fiduswriter.org) and the [Open Journal Systems](https://pkp.sfu.ca/ojs/) we choose a stable technical foundation. We secure user acceptance by respecting the characteristics of the traditional processes social scientists are used to: web publications must have the same high-quality layout as print publications, and information must remain citable by stable page numbers. To ensure we meet these requirements, we will work closely with the publishers of [methods, data, analyses (mda)](http://www.gesis.org/publikationen/zeitschriften/mda/) and [Historical Social Research (HSR)](http://www.gesis.org/en/hsr/hsr-home/), two international peer reviewed open accessible journals published by [GESIS](/Project_Partner/GESIS), and build early demonstrators for usability evaluation. Our system will initially provide readers, authors and reviewers with an alternative, thus having the potential to gain wider acceptance and gradually replace the old, incoherent publication process of our journals and of others in related fields. It will make journals more “open” (in terms of reusability) that are open access already, and it has the potential to serve as an incentive for turning “closed” journals into open access ones.
+
+OSCOSS is funded by the DFG in the [Open Access Transformation](http://www.dfg.de/en/research_funding/announcements_proposals/2014/info_wissenschaft_14_29/index.html) programme."""^^sysont:Markdown .
+
+projects:ExConQuer a foaf:Project, eis:OpenSourceProject ;
+                   rdfs:label "ExConQuer" ;
+                   dcterms:abstract """A major obstacle to the wider use of semantic technology is the perceived complexity of RDF data by stakeholders who are not familiar with the Linked Data paradigm, or are otherwise unaware of the dataset's underlying schema. In order to help overcome this barrier, we introduce the concept of RDF softening, which aims to preserve the semantic richness of the data model while catering for simplified and workable views of the data.
+
+We address the softening objective with the ExConQuer Framework, which facilitates the publication and consumption of RDF in a variety of generic formats. Through the Query Builder Tool, we aim to lower the entry barrier for any stakeholder requiring the use of Linked Open Data. We enable the user to explore existing Linked Data and generate a SPARQL query, then proceed to download and convert the results in a number of formats. Through the PAM Tool, the user is able to explore existing queries executed on various datasets through filters, and re-load them on the Query Builder tool to edit or re-run them.
+""" ;
+                   doap:maintainer people:JudieAttard ;
+                   eis:hookline "Linked Data Publication and Consumption Framework" ;
+                   eis:status "Ongoing" ;
+                   foaf:homepage "";
+                   foaf:logo "" ;
+                   site:content """[Query Builder Github Source Code](https://github.com/LinDA-tools/QueryBuilder \"Query Builder Github Source Code\")
+
+[RDF2Any API Github Source Code](https://github.com/LinDA-tools/RDF2Any \"RDF2Any API Github Source Code\")
+
+[ConQuer Ontology](http://butterbur04.iai.uni-bonn.de/ontologies/cqo/cqo \"ConQuer Ontology\")
+
+[Query Builder Tool](http://52.26.72.112:3000/query/builder \"Query Builder Tool\")
+
+[PAM Tool](http://52.26.72.112 \"PAM Tool\")
+
+[Demo Video](https://youtu.be/ZqS1d0iGcss \"Demo Video\")
+
+[Usability Survey](https://drive.google.com/file/d/0B4hB04Qrh7LgcjB5Y2NqMTN6eVE/view?usp=sharing \"Usability Survey\")
+
+[Usability Survey Evaluation Results](https://drive.google.com/open?id=0B4hB04Qrh7LgSUc4THVhdktDVEk&authuser=0 \"Usability Survey Evaluation Results\")
+"""^^sysont:Markdown .
+
+projects:SeReCo a foaf:Project, eis:FundedProject ;
+                rdfs:label "SeReCo" ;
+                foaf:homepage "http://sereco.univ-st-etienne.fr" ;
+                foaf:logo "" ;
+                dcterms:abstract "SeReCo (Semantics, Coordination and Reasoning) is a German-French doctoral college.  Its scientific purpose of SeReCo is to explore the spectrum of technologies related to semantics, reasoning and coordination in distributed and open environments (such as the Web)." ;
+                doap:maintainer people:ChristophLange ;
+                site:content """SeReCo (Semantics, Coordination and Reasoning) is a [German-French doctoral college](http://www.dfh-ufa.org/de/forschung/dt-frz-doktorandenkollegs-dfdk/) funded by the [Franco-German University](http://www.dfg-ufa.org) (Deutsch-Französische Hochschule). The scientific purpose of SeReCo is to explore the spectrum of technologies related to semantics, reasoning and coordination in distributed and open environments (such as the Web).
+
+Our research works include the following topics:
+
+- Semantic data modeling: Linked data, Ontologies, Annotations
+- Reasoning on the Semantic Web
+- Knowledge extraction, knowledge modeling and knowledge integration
+- Adaptive applications and coordination Management and protection of identity, privacy and confidentiality
+- Multi-Agent-based modeling and programming of open and decentralized systems
+- Coordination models and technologies Self-Organizing systems
+- Context aware mobile applications (using mobile devices and sensors)
+
+Several application domains will be addressed, including social network systems, e-health, enterprise information integration, open-access scientific publishing, and innovation platforms.
+
+The [first workshop](http://eis.iai.uni-bonn.de/schema_Event/Doctoral_College_Workshop_2015.html) took place in February 2015.
+
+#Events
+
+{{query where=\"?resourceUri a schema:Event. ?resourceUri schema:additionalType projects:SeReCo \" template=\"liplain\"}}"""^^sysont:Markdown .
+
+projects:Linda a foaf:Project, eis:FundedProject ;
+               rdfs:label "LinDA" ;
+               foaf:homepage "http://linda-project.eu" ;
+               dcterms:abstract "The LinDA project addresses one of the most significant challenges of the usage and publication of Linked Data, the renovation and conversion of existing data formats into structures that support the semantic enrichment and interlinking of data. The set of tools provided by LinDA will assist enterprises, especially SMEs which often cannot afford the development and maintenance of dedicated information analysis and management departments, in efficiently developing novel  data analytical services that are linked to the available public data therefore contributing to improve their competitiveness and stimulating the emergence of innovative business models." ;
+               foaf:logo <http://linda-project.eu/wp-content/uploads/2014/02/linda_logo11.png> ;
+               doap:maintainer people:SoerenAuer ;
+               ns4:endDate "\"2015-11-31+02:00\"^^xsd:date" ;
+               ns4:startDate "\"2013-12-01+02:00\"^^xsd:date" ;
+               eis:hookline "Enabling Linked Data and Analytics for SMEs by renovating public sector information" ;
+               eis:partner ns19:TTNews24, ns19:Fraunhofer_FOKUS, ns19:National_Technical_University_of_Athens, ns19:HYPERBOREA_SRL, ns19:Piksel_SpA, ns19:Critical_Publics_Ltd, ns19:UBITECH ;
+               eis:promoted "\"true\"^^xsd:boolean" ;
+               eis:status "Ongoing" ;
+               site:content """EU Research embraces SMEs for adding value to everyday operations through the introduction of Linked Open Data
+
+LinDA (Enabling Linked Data and Analytics for SMEs by renovating public sector information - Grant Agreement No: FP7-610565) is an EC co-funded project under the 7th Framework Programme comprised of leading Linked Open Data technology researchers and SMEs and Industries that have seen a clear benefit in adopting the Linked Data paradigm to increase their competitiveness and become world leaders in their service offering activities.
+
+Following up on the recent developments in the fields of Linked and Open Data, LinDA will provide an infrastructure of technologies and methods for porting the advantages of the above-mentioned technological fields to the actual production line of enterprises, with a focus on EU SMEs. In doing so, LinDA will address one of the most significant challenges of the usage and publication of Linked Data, the renovation and conversion of existing data formats into structures that support the semantic enrichment and interlinking of data, thus minimizing the required effort and cost as well as potential semantic conflicts and ambiguities. The LinDA ecosystem of publication and consumption Apps will significantly motivate SMEs to follow the Linked Data paradigm for the publication of open data therefore realizing the full potential of linking, analysing and mashing-up data as well as stimulating new, innovative business models.
+
+LinDA is a 2-year collaborative research and development project that started in December 2013 and is coordinated by the DSSLab research group at National Technical University of Athens (Greece). Consortium partners include: Fraunhofer FOKUS (Germany), UBITECH (Greece), University Of Bonn (Germany), Piksel (Italy), Critical Publics (United Kingdom), Hyperborea (Italy) and TTNews24 (Italy).
+
+The results of the LinDA project are foreseen to have a significant impact on the efficiency of the information management of enterprises, especially SMEs that in most cases cannot afford the development and maintenance of dedicated information analysis and management departments. As such, the cost-efficient development of innovative services and data analytical services that are linked to the available public data will provide SMEs a strong competitive advantage in the market, and will in this way contribute to the competence of the European industry. """^^sysont:Markdown .
+
+projects:MobiVoc a foaf:Project, eis:CommunityProject ;
+                 rdfs:label "MobiVoc" ;
+                 skos:prefLabel "Mobility Vocabulary" ;
+                 foaf:homepage <http://mobivoc.org> ;
+                 foaf:logo "" ;
+                 dcterms:abstract """MobiVoc - Open Mobility Vocabulary aims to support the mobility of humans by the mobility of data.
+
+
+
+
+
+
+
+""", "MobiVoc - Open Mobility Vocabulary aims to support the mobility of humans by the mobility of data." ;
+                 foaf:logo <http://www.mobivoc.org/static/img/logo-www.mobivoc.org.png> ;
+                 doap:maintainer people:NiklasPetersen ;
+                 eis:hookline "Open Mobility Vocabulary" ;
+                 eis:partner ns19:Automotive_Partner_Assotiation, ns16:brox, ns19:Bremer_Institut_fuer_Produktion_und_Logistik_GmbH ;
+                 eis:promoted "1"^^xsd:integer ;
+                 eis:status "Ongoing" ;
+                 site:content """
+Future mobility poses new challenges for the innovative data-based services. Some examples are: route planning according to energy aspects or multimodal mobility services - sharing services, public transportation, taxis in complex environments. Development of such services requires integration of various data sources: e.g. map data, vehicle data, weather data, mobility service descriptions, events information, etc. These data sets often have proprietary data structures. The MobiVoc  initiative MobiVoc intends to enable a data communication among all available data sources by providing a powerfyl vocabulary for modeling the mobility data. """^^sysont:Markdown ;
+                 <doap:browse> <https://github.com/MobiVoc> .
+
+projects:LUCID a foaf:Project, eis:FundedProject ;
+               rdfs:label "LUCID" ;
+               foaf:homepage "http://lucid-project.org/" ;
+               foaf:logo "" ;
+               dcterms:abstract """LUCID is a BMBF funded 2-year project which will change the way how partners in supply chain networks will communicate with each other. In LUCID we research and develop on Linked Data technologies in order to allow partners in supply chains to describe their work, their company and their products for other participants. This allows for building distributed networks of supply chain partners on the Web without a centralized infrastructure.
+
+LUCID is funded by the german Federal Ministry of Education and Research (BMBF) in KMU-innovativ: Informations- und Kommunikationstechnologien initiative, which part of the IKT 2020 - Forschung für Innovation funding programme.""" ;
+               foaf:logo <http://lucid-project.org/static/img/logo-lucid-project.org.png> ;
+               doap:maintainer people:NiklasPetersen ;
+               eis:hookline "LINKED VALUE CHAIN DATA" ;
+               eis:partner ns16:Infineon_Technologies_AG, ns23:id, ns19:Automotive_Partner_Assotiation, ns16:brox, ns16:Implisense_GmbH ;
+               eis:status "Ongoing" ;
+               site:content """LUCID is a BMBF funded 2-year project which will change the way how partners in supply chain networks will communicate with each other. In LUCID we research and develop on Linked Data technologies in order to allow partners in supply chains to describe their work, their company and their products for other participants. This allows for building distributed networks of supply chain partners on the Web without a centralized infrastructure.
+
+LUCID is funded by the german Federal Ministry of Education and Research (BMBF) in KMU-innovativ: Informations- und Kommunikationstechnologien initiative, which part of the IKT 2020 - Forschung für Innovation funding programme."""^^sysont:Markdown .
+
+projects:STODaP a foaf:Project, eis:OpenSourceProject ;
+                rdfs:label "STODaP" ;
+                doap:Source_Code "https://github.com/alantygel/StodAp" ;
+                foaf:homepage "http://stodap.org" ;
+                dcterms:abstract "Semantic Tags for Open Data Portals interlinks several Open Data Portals through Global Semantic Tags." ;
+                foaf:logo <http://stodap.org/tags/images/logo.png> ;
+                doap:maintainer people:AlanTygel ;
+                eis:hookline "Semantic Tags for Open Data Portals" ;
+                eis:status "Ongoing" ;
+                site:content """Semantic Tags for Open Data Portals is a platform that hosts Global Tags, interlinking several Open Data Portals (ODP) both from governments and civil society through meaningful tags. Using the MUTO ontology, local tags in each portal can be connected to the STODaP server, making it easy for users to access several data sources tagged similarly in different portal. The relation between tags is driven by translations and synonyms, and also by co-occurence. Both figures below illustrate the idea:
+
+<img src=\"http://stodap.org/tags/images/thumb/5/59/Overview.png/800px-Overview.png\" alt=\"Overview of the STODaP system\" width=500px />
+
+<img src=\"http://stodap.org/tags/images/7/70/Example.png\" alt=\"Example of STODaP system usage\" width=500px />
+
+
+
+The work is a partnership between Greco, at Federal University of Rio de Janeiro, and EIS, at University of Bonn and Fraunhofer IAIS. """^^sysont:Markdown .
+
+projects:SlideWiki a foaf:Project, eis:FundedProject ;
+                   rdfs:label "SlideWiki" ;
+                   ov:screenshot <http://lh3.ggpht.com/-1eEGAM8mIG4/TrUtrFohoMI/AAAAAAAABB0/Ta2QC-rsyMs/s800/slidewiki-view.png>, <http://lh4.ggpht.com/-_ucInHOV87c/TrUtqpcwi7I/AAAAAAAABBs/p3bmvtSrHJ0/s800/slidewiki-home.png>, <http://lh6.ggpht.com/-WDej-O6jTZE/TrUtq0wZe2I/AAAAAAAABBw/DrmfWiZgKnY/s800/slidewiki-edit.png>, <http://lh6.ggpht.com/-gtrafeiSUNo/TrUtqrBO2UI/AAAAAAAABBo/FyLTviThwCQ/s800/slidewiki-search.png> ;
+                   foaf:homepage "http://slidewiki.org" ;
+                   dcterms:abstract "SlideWiki is a collaboration platform which enables communities to build, share and play online presentations. In addition to importing PowerPoint presentations, it supports authoring of interactive online slides using HTML and LateX. Slides and their containers (called Deck), are versioned thereby enabling change tracking. Users can create their own themes on top of existing themes or re-use other's themes." ;
+                   foaf:logo <http://slidewiki.org/static/img/slidewiki_logo.png> ;
+                   doap:maintainer people:SoerenAuer ;
+                   eis:hookline "helps communities to create great presentations collaboratively" ;
+                   eis:publicationTag "slidewiki" ;
+                   eis:promoted "\"true\"^^xsd:boolean" ;
+                   eis:status "Ongoing" ;
+                   site:content """SlideWiki aims to exploit the wisdom, creativity and productivity of the crowd for the creation of qualitative, rich, engaging educational content. With SlideWiki users can create and collaborate on slides, diagrams, assessments and arrange this content in richly-structured course presentations.
+
+SlideWiki empowers communities of educators to author, share and re-use sophisticated educational content in a truly collaborative way. Existing presentations can be imported and transformed into interactive courses using HTML and LaTeX. All content in SlideWiki is versioned thereby allowing users to revise, adapt and re-mix all content. Self-test questions can be attached to each individual slide and are aggregated on the presentation level into comprehensive self-assessment tests. Users can create their own presentation themes. Slidewiki supports the semi-automatic translation of courses in more than 50 languages.
+
+With SlideWiki we aim to make educational content dramatically more accessible, interactive, engaging and qualitative. More information about SlideWiki can be found in the [documentation](http://slidewiki.org/documentation \"documentation\").
+"""^^sysont:Markdown .
+
+projects:SINA a foaf:Project, eis:IncubatorProject ;
+              rdfs:label "SINA" ;
+              foaf:homepage "http://sina.aksw.org/" ;
+              dcterms:abstract "The Web of Data contains a wealth of knowledge belonging to a large number of domains. Retrieving data from such precious interlinked knowledge bases is an issue. By taking the structure of data into account, it is expected that upcoming generation of search engines is approaching to question answering systems, which directly answer user questions. But developing a question answering over these interlinked data sources is still challenging because of two inherent characteristics: First, different datasets employ heterogeneous schemas and each one may only contain a part of the answer for a certain question. Second, constructing a federated formal query across different datasets requires exploiting links between these datasets on both the schema and instance levels. In this respect, several challenges such as resource disambiguation, vocabulary mismatch, inference, link traversal are raised. In this dissertation, we address these challenges in order to build a question answering system for Linked Data. We present our question answering system Sina, which transforms user-supplied queries (i.e. either natural language queries or keyword queries) into conjunctive SPARQL queries over a set of interlinked data sources. Sina encounters the following challenges: - Query segmentation - Query disambiguation - Query reformulation - Formal query construction - Data fusion on Linked Data - Query cleaning" ;
+              foaf:logo <http://sina.aksw.org/resources/images/logo_SINA.png> ;
+              ns4:startDate "2010" ;
+              site:content """The Web of Data contains a wealth of knowledge belonging to a large number of domains. Retrieving data from such precious interlinked knowledge bases is an issue. By taking the structure of data into account, it is expected that upcoming generation of search engines is approaching to question answering systems, which directly answer user questions. But developing a question answering over these interlinked data sources is still challenging because of two inherent characteristics: First, different datasets employ heterogeneous schemas and each one may only contain a part of the answer for a certain question. Second, constructing a federated formal query across different datasets requires exploiting links between these datasets on both the schema and instance levels. In this respect, several challenges such as resource disambiguation, vocabulary mismatch, inference, link traversal are raised. In this dissertation, we address these challenges in order to build a question answering system for Linked Data. We present our question answering system Sina, which transforms user-supplied queries (i.e. either natural language queries or keyword queries) into conjunctive SPARQL queries over a set of interlinked data sources. Sina encounters the following challenges:
+- Query segmentation
+- Query disambiguation
+- Query reformulation
+- Formal query construction
+- Data fusion on Linked Data
+- Query cleaning"""^^sysont:Markdown .
+
+projects:OpenCourseWare_observatory a foaf:Project, eis:IncubatorProject ;
+                                    rdfs:label "OpenCourseWare observatory" ;
+                                    foaf:homepage "";
+                                    foaf:logo "" ;
+                                    dcterms:abstract "OpenCourseWare observatory is a currently a survey to assess quality of Open CourseWare. A number of selected courses from different OCW systems is assessed based on predefined metrics. The objectives of this study is to determine the quality of OCW which helps to: identify renowned OCW creators and publishers, diagnose the strengths and weaknesses of particular OCW, evaluate the employed creation and curation methods as well as predict the future performance of OCW." ;
+                                    doap:maintainer people:ChristophLange .
+
+projects:iRap a foaf:Project, eis:IncubatorProject ;
+              rdfs:label "iRap" ;
+              doap:Source_Code ns31:iRap ;
+              doap:Mailing_list "https://groups.google.com/forum/#!forum/irap-ld" ;
+              foaf:homepage "http://eis.iai.uni-bonn.de/Projects/iRap.html" ;
+              foaf:logo "" ;
+              dcterms:abstract "iRap is an RDF update propagation framework that propagates only interesting parts of an update from the source dataset to the target dataset.  iRap filters interesting parts of changesets from the source dataset based on graph-pattern-based interest expressions registered by a target dataset user." ;
+              doap:maintainer people:Kemele_M_Endris ;
+              eis:hookline "Interest-based RDF update propagation framework" ;
+              eis:status "Ongoing" ;
+              site:content """Many LOD datasets, such as DBpedia and LinkedGeoData, are voluminous and process large amount of requests from diverse applications.
+Replication of Linked Data datasets enhances flexibility of information sharing and integration infrastructures.
+Since hosting a replica of large datasets, such as DBpedia and LinkedGeoData, is costly, organizations might want to host only a relevant subset of the data.
+However, due to the evolving nature of these datasets in terms of content and ontology, maintaining a consistent and up-to-date replica of the relevant data is a challenge.
+We present an approach and its implementation for interest-based RDF update propagation, which propagates only interesting parts of updates from the source to the target dataset.
+Our approach is based on a formal definition for graph-pattern-based interest expressions that is used to filter interesting parts of updates from the source dataset.
+
+### Architecture
+
+We implement the approach in the iRap framework and perform a comprehensive evaluation based on DBpedia Live updates.
+
+<br /><img src=\"https://lh3.googleusercontent.com/onEePRI_iEXqtnFPs-JvxhdJnh7lVD1iUdghc-Tk7ZQ=w386-h207-p-no\" width=\"550\" />
+<br /><p>
+The Interest-based RDF update propagation (iRap) framework was implemented using Jena-ARQ. It is provided as open-source and consists of three modules: Interest Manager (IM), Changeset Manager (CM) and Interest Evaluator (IE), each of which each can be extended to accommodate new or improved functionality.
+</p>
+### Evaluation
+
+<p class=\"tab\">
+    To evaluate the proposed approach, we performed experiments on the iRap  framework using <a href=\"http://live.dbpedia.org/changesets/\" target=\"_blank\">changesets published by DBpedia</a> and compared the results with the <a href=\"https://github.com/dbpedia/dbpedia-live-mirror\" target=\"_blank\">DBpedia Live Mirror</a> tool.
+The comparison considers two cases: using iRap to update a previously-established local replica of i) an entire remote dataset (<i>Entire DBpedia for a Location-based app</i>) ii) a subset of a remote dataset (<i>Slice of DBpedia about Soccer-players and teams app</i>). These two cases simulate two ways in which iRap can be used: i) using interest-based changeset propagation for future updates of a local copy of a large dataset or ii) starting with a new subset of the large dataset.
+</p>
+
+<p class=\"tab\">
+We tested our approach using the DBpedia dump for the initial setup of the target datasets for two different application domains, namely, Location and Football datasets. The following figure shows the evaluation results comparing the growth of mirror based replica and iRap based replica:<br/>
+<p style=\"display:inline;\"><img style=\"padding:5px\" src=\"https://lh3.googleusercontent.com/-LhmCXvuaDc4/VU9zQBzQtNI/AAAAAAAACDc/bYRG59E-idY/w772-h430-no/ds-growth-per-hours.jpg\" width=\"350\" />
+
+<img style=\"padding:5px\"  src=\"https://lh3.googleusercontent.com/-87AvMzZSVcQ/VU9zRMW4IVI/AAAAAAAACDk/QC0IRyPQvXE/w785-h449-no/loc-ds-growth-per-hours.jpg\" width=\"350\"  /> <br/>Fig 1. Soccer app dataset growth                                              Fig 2. Location app dataset growth</p> <br /><br/>
+Further evaluation material can be found at iRap's <a href=\"https://github.com/EIS-Bonn/iRap\" target=\"_blank\"> GitHub repository.</a>
+</p>
+### Demo
+
+Download:  <a href=\"http://eis.iai.uni-bonn.de/upload/iRap/demo.zip\">demo.zip</a>.
+<p> The download file contains sample interest expression file - <i>interest.ttl</i>, last downloaded date file - <i>lastDownloadedDate.dat</i>, and java archive file - <i>irap.jar</i>.
+</p>
+<p>
+After extracting the compressed file run the following command:</p>
+<pre>         <code>$java -jar irap.jar   interest.ttl   [numOfChangesets] </code>
+</pre>
+Where - <ul><li><code>interest.ttl</code> - is an interest expression that contains the following query pattern<pre><code>
+CONSTRUCT
+ WHERE {
+   ?person     a     dbpedia-owl:Person .
+   ?person    dbpedia-prop:name    ?name .
+   OPTIONAL {   ?person foaf:homepage  ?page .}
+ }</code></pre>
+</li>
+<li><code>numOfChangesets</code> - is number of changesets you want to propagate since May 01, 00:00:00 2015. e.g., 10, 100, 1000, etc.<br />(Note that, lastDownloadedDate.dat file will always be updated per each download. Therefore, if you run iRap once then it will be updated and it will not start from May 01 but from the last downloaded date. )</li>
+</ul>
+
+After iRap finishes evaluation you will find (name of TDB folders depend on interest expression):
+<ol>
+            <li>  <i>names-tdb</i> - a TDB dataset that contains only <b>interesting triples</b> that matches the above query, </li>
+            <li><i>names-pi-tdb</i> - a TDB dataset that contains <b>potentially interesting triples</b> that matches parts of the above query, and </li>
+            <li> <i>changesets</i> - a folder that contains last publication date file from a source dataset </li>
+   </ol>"""^^sysont:Markdown .
+
+projects:Luzzu a foaf:Project, eis:OpenSourceProject ;
+               rdfs:label "Luzzu" ;
+               foaf:homepage "http://eis-bonn.github.io/Luzzu" ;
+               foaf:logo "" ;
+               dcterms:abstract """Luzzu is a Quality Assessment Framework that provides an integrated platform that: (1) assesses Linked Data quality using a library of generic and user-provided domain specific quality metrics in a scalable manner; (2) provides queryable quality metadata on the assessed datasets; (3) assembles detailed quality reports on assessed datasets.
+Furthermore, we aim to create an infrastructure that:
+<ul><li>can be easily extended by users by creating their custom and domain-specific pluggable metrics, either by employing a novel declarative quality metric specification language or conventional imperative plugins;</li>
+<li>employs a comprehensive ontology framework for representing and exchanging all quality related information in the assessment workflow;</li>
+<li>implements quality-driven dataset ranking algorithms facilit- ating use-case driven discovery and retrieval.</li>
+</ul>""" ;
+               doap:maintainer people:JeremyDebattista ;
+               eis:hookline "A Quality Assessment Framework for Linked Open Datasets" ;
+               eis:status "Ongoing" .
+
+projects:WDAqua_ITN a foaf:Project, eis:FundedProject ;
+                    rdfs:label "WDAqua ITN" ;
+                    foaf:homepage "http://wdaqua.informatik.uni-bonn.de/?page_id=34" ;
+                    foaf:logo "" ;
+                    dcterms:abstract "Smart infrastructures and citizens’ participation in the digital society are increasingly data-driven. Sharing, connecting, managing, analysing and understanding data on the Web will enable better services for citizens, communities and industry. However, turning web data into successful services for the public and private sector requires skilled web and data scientists, and it still requires further research. WDAqua aims at advancing the state of the art by intertwining training, research and innovation efforts, centred around data-driven question answering. Question answering is immediately useful to a wide audience of end users, and we will demonstrate this in settings including e-commerce, public sector information, publishing and smart cities. Steps to answering a question are (1) understanding a spoken question, (2) analysing the question’s text, (3) finding data to answer the question, and (4) presenting the answer(s). Every individual research project in WDAqua connects at least two of these steps." ;
+                    doap:maintainer people:SoerenAuer ;
+                    ns4:endDate "june 2018" ;
+                    eis:hookline "Answering Questions using Web Data" ;
+                    eis:partner ns23:id, ns16:Open_Data_Institute, ns19:National_Technical_University_of_Athens, ns16:University_of_Southampton ;
+                    eis:promoted "\"true\"^^xsd:boolean"@en ;
+                    eis:status "ongoing" ;
+                    site:content """#Events
+
+{{query where=\"?resourceUri a schema:Event. ?resourceUri schema:additionalType projects:WDAqua_ITN\" template=\"liplain\"}}"""^^sysont:Markdown .
+
+<http://eis.iai.uni-bonn.de/Projects/SemAnn/1> a foaf:Project, eis:OpenSourceProject ;
+                                               rdfs:label "SemAnn" ;
+                                               foaf:homepage "http://github.com/AKSW/semann" ;
+                                               dcterms:abstract """SemAnn allows you to semantically annotate (using RDF triples) text in
+PDFs. These annotations are then used for recommending similar PDF
+documents that the reader might find relevant.""" ;
+                                               doap:maintainer people:ChristophLange ;
+                                               eis:hookline "Web-based semantic annotation tool for PDF documents" ;
+                                               eis:status "Ongoing" ;
+                                               site:content """SemAnn is an open source web-based
+semantic annotation tool for PDF files with a special focus on academic
+publications. SemAnn allows users to collaboratively annotate text, thus
+making knowledge contained in those PDF files accessible as RDF graphs
+for further querying. The tool can be used with arbitrary ontologies as
+annotation vocabularies. The user can enter annotations of various
+levels of expressivity  – from simple typed annotations (e.g.
+annotations typed as [DBpedia](http://dbpedia.org) resources or ontology
+classes) to describing relationships between annotations themselves
+(e.g. describing the citation context of an annotation). Structural
+context of annotations is made available for querying by the tool’s
+capability of tracking the hierarchy of annotations. This enables
+reasoners to answer questions such as “find papers where the problem
+statement of the paper addresses dynamic programming languages.”. It is
+hence capable of viewing annotations in the context of scientific
+discourse like the motivation, problem statement, etc (but not limited
+to it). With its recommendations of similar papers, SemAnn provides an
+immediate beneﬁt in return for making the effort of annotation. The
+justification of recommendations includes information about matches by
+structural context. [Code is available on
+Github](http://github.com/AKSW/semann)."""^^sysont:Markdown .
+
+projects:EDSA a foaf:Project, eis:FundedProject ;
+              rdfs:label "EDSA" ;
+              foaf:homepage "http://edsa-project.eu/" ;
+              dcterms:abstract "The European Data Science Academy (EDSA) will establish a virtuous learning production cycle whereby we: a) analyse the required sector specific skillsets for data analysts across the main industrial sectors in Europe; b) develop modular and adaptable data science curricula to meet these needs; and c) deliver training supported by multi-platform and multilingual learning resources based on our curricula. The curricula and learning resources will be continuously evaluated by pedagogical and data science experts during both development and deployment." ;
+              foaf:logo <http://edsa-project.eu/edsa-data/themes/edsa/images/edsa-logo.png> ;
+              doap:maintainer people:SoerenAuer ;
+              ns4:startDate "2015-02-25"^^xsd:date ;
+              eis:hookline " European Data Science Academy" ;
+              eis:status "Ongoing" .
+
+projects:Diachron a foaf:Project, eis:FundedProject ;
+                  rdfs:label "DIACHRON" ;
+                  foaf:homepage "http://www.diachron-fp7.eu" ;
+                  dcterms:abstract """DIACHRON intends to address and cope with certain issues arising from the evolution of the data such as:
+
+(a) Monitor the changes of LOD datasets (tracking the evolution);
+
+(b) Identify the cause of the evolution of the datasets in respect with the real world evolution of the entities the datasets describe (provenance problem);
+
+(c) Repair various data deficiencies (curation problem);
+
+(d)Temporal and spatial quality assessment of the harvested LOD datasets and determination of the datasets versions that need to be preserved (appraisal);
+
+(e) Archive multiple versions of data and cite them accordingly to make the reference of previous data feasible (archiving and citation);
+
+(f) Retrieve and query previous versions (time traveling queries)
+
+The DIACHRON solution aims not only to store previous versions for preservation in case of future need of them, but to create a live repository of the data that captures and highlights data evolution by keeping all data (current and previous) accessible, combined with a toolset that handles the full life cycle of the Data Web.
+
+""" ;
+                  foaf:logo <http://www.diachron-fp7.eu/uploads/2/1/2/0/21208652/4006116.png?239> ;
+                  doap:maintainer people:ChristophLange ;
+                  ns4:endDate "\"2016-03-31+02:00\"^^xsd:date" ;
+                  ns4:startDate "\"2013-04-01+02:00\"^^xsd:date" ;
+                  eis:hookline "Preserving the Evolving Data Web: Making Open / Linked Data Diachronic" ;
+                  eis:partner ns19:ATHENA_Research_and_Innovation_Center_in_Information_Communication_and_Knowledge_Technologies, ns19:Data_Publica, ns16:brox, ns19:Foundation_for_Research_and_TechnologyHellas_Institute_of_Computer_Science, ns19:DataMarket_EHF, ns19:Hanzo_Archives_Ltd, ns19:University_of_Edinburgh, ns19:European_Bioinformatics_Institute, ns19:Intrasoft_International_SA ;
+                  eis:promoted "\"true\"^^xsd:boolean" ;
+                  eis:status "Ongoing" ;
+                  site:content """The Web has not only caused a revolution in communication; it also has completely changed the way we gather and use data. Open data -- data that is available to everyone -- is exponentially growing, and it has completely transformed the way we now conduct any kind of research or scholarship; it has changed the scientific method. The recent development of Linked Open Data has only increased the possibilities for exploiting public data.
+Given the value of open data how do we preserve it for future use? Currently, much of the data we use, e.g. demographic records, clinical statistics, personal and enterprise data as well as many scientific measurements cannot be reproduced.
+
+However, there is overwhelming evidence that we should keep such data where it is technically and economically feasible to do so. Until now this problem has been approached by keeping this information in fixed data sets and using extensions to the standard methods of disseminating and archiving traditional (paper) artifacts. Given the complexity, the interlinking and the dynamic nature of current data, especially Linked Open Data, radically new methods are needed.
+DIACHRON tackles this problem with a fundamental assumption: that the processes of publishing and preservation data are one and the same. Data are archived at the point of creation and archiving and dissemination are synonymous.
+
+DIACHRON takes on the challenges of evolution, archiving, provenance, annotation, citation, and data quality in the context of Linked Open Data and modern database systems. DIACHRON intends to automate the collection of metadata, provenance and all forms of contextual information so that data are accessible and usable at the point of creation and remain so indefinitely.
+The results of DIACHRON are evaluated in three large-scale use cases: open governmental data life-cycles, large enterprise data intranets and scientific data ecosystems in the life-sciences."""^^sysont:Markdown .
+
+projects:LinkDaViz a foaf:Project, eis:IncubatorProject ;
+                   rdfs:label "LinkDaViz" ;
+                   foaf:homepage "https://github.com/LinDA-tools/Visualization"@en ;
+                   dcterms:abstract """As the Web of Data is growing steadily, the demand for user-friendly means for exploring, analyzing and visualizing Linked Data is also increasing. The key challenge for visualizing Linked Data consists in providing a clear overview of the data and supporting non-technical users in ﬁnding and configuring suitable visualizations for a speciﬁed subset of the data.
+<br><br>
+In order to accomplish this, we are developing a largely automatic visualization workﬂow based on the state-of-the-art linked data approaches, which guides users through the process of creating visualizations by automatically categorizing and binding data to a visualization’s parameters.
+<br><br>
+The LinkDAViz visualization workflow starts with the selection and exploration of a RDF dataset. After specifying the part of data to be visualized a ranked list of recommended visualizations is computed and presented to the user. Finaly, when one of the recommendations is selected, the resulting visualization is displayed, ready for customization.
+<br><br>The screencast is available <a href=\"https://drive.google.com/file/d/0B3uXlknE4eJra3AxblQyQWpPcG8/view?usp=sharing\">here</a>.""" ;
+                   foaf:logo <https://www.dropbox.com/s/uwf1jvqhg13axly/Logo_.png?dl=1> ;
+                   doap:maintainer people:KlaudiaThellmann ;
+                   eis:hookline "A Visualization Approach Employing Automatic Binding of Linked Data to Visualizations" ;
+                   eis:status "Ongoing" .
+
+projects:LiDaKrA a foaf:Project, eis:FundedProject ;
+                 rdfs:label "LiDaKrA" ;
+                 dcterms:abstract "The Web not only gives rise to new forms of crime, it also enables new technology for crime investigation. Suspects leave traces on the Web, items are being sold and bought on the Web, and a wealth of public open data about organizations and places is available on the Web. LiDaKrA aims at a holistic approach to extract, network and fuse crime-relevant information from public and private sources such as: the Web in general, the Social Web (social networks, blogs or wikis), Deep Web (eCommerce databases such as ebay or Amazon Marketplace), Dark Web (informations from the Tor network), Data Web (open data such as DBpedia or GeoNames). The technical components will be implemented in an integrated platform and will be evaluated in concrete use cases with multiple stakeholders from crime investigation authorities. " ;
+                 doap:maintainer people:ChristophLange ;
+                 eis:hookline "Linked-Data-basierte Kriminalanalyse (Linked Data based crime analysis)" ;
+                 eis:partner ns16:brox, ns19:Universitaet_Kassel__Institut_fuer_Wirtschaftsrecht, ns19:Bund_Deutscher_Kriminalbeamter, ns16:Bundeskriminalamt ;
+                 foaf:homepage "" ;
+                 foaf:logo "" ;
+                 eis:status "Ongoing" ;
+                 site:content """To discover and to protect society against Organised Crime, it is necessary to integrate information from numerous sources (catalogues, reports, geodata, forums/blogs, social networks, etc.).  These sources are characterised by a considerable heterogeneity w.r.t. data format and structures, coverage, quality and means of access.  The Linked Data paradigm enables efficient and effective networking and integration of heterogeneous, distributed data.  LiDaKrA aims at a holistic approach to extract, network and fuse crime-relevant information from public and private sources such as:
+
+* the Web in general, the Social Web (social networks, blogs or wikis), Deep Web (eCommerce databases such as ebay or Amazon Marketplace), Dark Web (informations from the Tor network), Data Web (open data such as DBpedia or GeoNames)
+* public databases (e.g. trade register, credit bureaus such as Genios or Bürgel)
+* shared internal catalogues (e.g. of the catalogue editorial department of the German Federal Criminal Police Office BKA, the PEP list of the EU, or WorldCheck)
+* databases of investigation authorities
+
+On top of an on-demand integration of such data we will employ a combination of machine learning approaches, as well as statistical, rule-based and semantic techniques for big data analysis to answer questions such as:
+
+* What patterns identify characteristic modi operandi of organised crime on the Internet?
+* How can one search for such patterns in a targeted way; how can they be predicted?
+* Which of the information sources used provides the most useful information?
+* How can one model evolution and dynamics of characteristic patterns?
+
+The technical components will be implemented in an integrated platform and will be evaluated in concrete use cases with multiple stakeholders from crime investigation authorities"""^^sysont:Markdown .
+
+projects:OpenBudgets a foaf:Project, eis:FundedProject ;
+                     rdfs:label "OpenBudgets.eu" ;
+                     foaf:homepage "https://twitter.com/openbudgetseu" ;
+                     dcterms:abstract "The OpenBudgets.eu project aims to provide a generic framework and concrete tools for supporting financial transparency, thus enhancing accountability within public administrations and reducing the possibility of corruption. A key challenge for OpenBudgets.eu is to provide a framework that is scalable, easy-to-use, flexible, and attractive. We will apply the project concept to three pilot scenarios targeting three different applications related to public spending: journalism, transparency initiatives and citizenship engagement. This project will involve various stakeholders, including but not limited to public administrations, citizens, NGOs, media organisations and public service companies. " ;
+                     foaf:logo <https://abs.twimg.com/sticky/default_profile_images/default_profile_6_400x400.png> ;
+                     doap:maintainer people:FabrizioOrlandi ;
+                     ns4:endDate "\"2017-06-30+02:00\"^^xsd:date" ;
+                     ns4:startDate "\"2015-06-30+02:00\"^^xsd:date" ;
+                     eis:partner ns19:University_of_Economics_Prague, ns19:Fundacin_Ciudadana_Civio, ns19:Transparency_International_EU_Office, ns19:Open_Knowledge_International, ns19:Journalism, ns19:Open_Knowledge_Germany, ns16:Open_Knowledge_Greece ;
+                     eis:promoted "\"true\"^^xsd:boolean" ;
+                     eis:status "Ongoing" ;
+                     site:content """The OpenBudgets.eu project aims to provide a generic framework and concrete tools for **supporting financial transparency**, thus enhancing accountability within public administrations and reducing the possibility of corruption. A key challenge for OpenBudgets.eu is to provide a framework that is scalable, easy-to-use, flexible, and attractive. We will apply the project concept to three pilot scenarios targeting three different applications related to public spending: **journalism**, **transparency initiatives** and **citizenship engagement**. This project will involve various stakeholders, including but not limited to public administrations, citizens, NGOs, media organisations and public service companies.
+"""^^sysont:Markdown .
+
+projects:BigDataEurope a foaf:Project, eis:FundedProject ;
+                       rdfs:label "BigDataEurope" ;
+                       foaf:homepage "http://www.big-data-europe.eu/" ;
+                       dcterms:abstract """BigDataEurope will provide support mechanisms for all the major aspects of a data value chain, in terms of the employed data and technology assets, the participating roles and the established or evolving processes. The effectiveness of the provided support mechanisms will be assessed in different domains pertaining to Europe’s major societal challenges with respect to the needs and requirements of the related communities. To this end, BigDataEurope focuses on providing an integrated stack of tools to manipulate, publish and use large-scale data resources; tools that can be installed and used freely in a customised data processing chain with minimal knowledge of the technologies involved and integrating and industrially hardening key open-source Big Data technologies and European research prototypes into a Big Data Integrator Platform, i.e. an ecosystem of specifications and reference implementations that are both attractive to current players from all parts of the data value chain while also lowering the entry barrier for new businesses.
+
+""" ;
+                       foaf:logo <http://www.big-data-europe.eu/wp-content/uploads/logo-BigDataEurope.png> ;
+                       doap:maintainer people:SoerenAuer ;
+                       ns4:endDate "2017-12-31" ;
+                       ns4:startDate "2015-01-01" ;
+                       eis:hookline "Integrating Big Data, Software & Communities for Addressing Europe’s Societal Challenges" ;
+                       eis:partner ns16:Open_PHACTS_Foundation_LBG, ns16:Centre_for_Renewable_Energy_Sources_and_Saving, ns16:Institut_fuer_Angewandte_Informatik_e_V, ns23:id, ns16:TenForce_BVBA, ns16:Semantic_Web_Company_GmbH, ns16:CESSDA_AS, ns16:National_and_Kapodistrian_University_of_Athens, ns16:Food_and_Agriculture_Organization_of_the_United_Nations, ns16:European_Union_Satellite_Centre, ns16:World_Wide_Web_Consortium_W3C_GEIE_ERCIM, ns16:National_Centre_for_Scientific_Research_Demokritos ;
+                       eis:status "Ongoing" ;
+                       site:content """In order to realise its objectives, Big Data Europe will focus on two clearly defined coordination and support measures:
+
+1. Coordination: Engaging with a diverse range of stakeholder groups representing particularly the Hori-zon 2020 societal challenges Health, Food & Agriculture, Energy, Transport, Climate, Social Sciences and Security; Collecting requirements for the ICT infrastructure needed by data-intensive science practition-ers tackling a wide range of societal challenges; covering all aspects of publishing and consuming seman-tically interoperable, large-scale data and knowledge assets;
+
+2. Support: Designing, realizing and evaluating a Big Data Aggregator platform infrastructure that meets requirements, minimises the disruption to current workflows, and maximises the opportunities to take advantage of the latest European RTD developments, including multilingual data harvesting, data analyt-ics, and data visualisation.
+
+BigDataEurope will implement and apply two main instruments to successfully realize these coordination and support measures:
+
+a) Build Societal Big Data Interest Groups in the W3C interest group scheme and involving a large number of stakeholders from the Horizon 2020 societal challenges as well as technical Big Data experts;
+
+b) Design, integrate and deploy a cloud-deployment-ready Big Data aggregator platform comprising key open-source Big Data technologies for real-time and batch processing, such as Hadoop, Cassandra and Storm.
+
+BigDataEurope aims to provide an adaptable, easy to deploy and use solution, which will allow the interest-ed user groups and stakeholders to extend their Big Data solutions or introduce Big Data technology to their business processes, based on a concrete methodology for producing a technically sound solution and maxim-izing its out-reach to the relevant communities."""^^sysont:Markdown .
+
+projects:ODINE a foaf:Project, eis:FundedProject ;
+               rdfs:label "ODINE" ;
+               foaf:homepage "http://opendataincubator.eu/" ;
+               dcterms:abstract "The first Open Data Incubator for Europe. Europe is supporting the next generation of digital businesses. The Open Data Incubator for Europe (ODINE) is part of that support - it helps European citizens build sustainable businesses using open data. It will offer up to €100.000 and will set up an environment and EU-wide network, including business angels, VCs and funding agencies, to support small and medium enterprises and startups in creating commercial value from open data. " ;
+               foaf:logo <https://dl.dropboxusercontent.com/u/1490985/ODINE_Logo_RGB.png> ;
+               doap:maintainer people:SoerenAuer ;
+               ns4:endDate "2017-08-01"^^xsd:date ;
+               ns4:startDate "2015-02-01"^^xsd:date ;
+               eis:hookline "Open Data Incubator for Europe" ;
+               eis:partner ns16:Open_Data_Institute, ns16:University_of_Southampton ;
+               eis:status "Ongoing" ;
+               site:content """We are pleased to announce the launch of the first Open Data Incubator for Europe. Europe is supporting the next generation of digital businesses. The Open Data Incubator for Europe (ODINE) is part of that support - it helps European citizens build sustainable businesses using open data. It will offer up to €100.000 and will set up an environment and EU-wide network, including business angels, VCs and funding agencies, to support small and medium enterprises and startups in creating commercial value from open data. Our approach in ODINE is to become facilitators in Europe, providing the tools and the contacts and bringing together data owners, entrepreneurs, investors and other players like Business Schools and Computer/Data training institutions, with the objective in mind of strengthening Europe’s competitive position. ODINE will provide an accelerator programme for SMEs and startups to establish business in open data related areas. In the programme, we will offer expert advisories from serial entrepreneurs and coaching from business schools. The successful graduations of the incubation programme will be further put forward to VCs within the networking, who will invest in the most innovative data-driven startups. Technologically, ODINE will set up a fully-fledged platform that will support the life cycle of the open data, from its generation, publication, and storage to the subsequent usage by the participants of the programme. By initiating an EU-wide industrial focused network, ODINE will not only attract entrepreneurs, but also engage with young innovators and students from universities by organising innovation labs and help them to critically revise their raw open data business ideas.
+"""^^sysont:Markdown .
+
+projects:VoCol a foaf:Project, eis:OpenSourceProject ;
+               rdfs:label "VoCol" ;
+               foaf:homepage "https://github.com/mobivoc/vocol" ;
+               foaf:logo "" ;
+               dcterms:abstract """Vocabularies typically reflect a consensus among experts in a
+certain application domain. They are thus implemented in collaboration
+of domain experts and knowledge engineers. Particularly the presence of
+domain experts with little technical background requires a low-threshold
+vocabulary engineering methodology. This methodology should be im-
+plementable without dependencies on complex software components, it
+should provide collaborators with comprehensible feedback on syntax
+and semantics errors in a tight loop, and it should give access to a human-
+readable presentation of the vocabulary. Inspired by agile software and
+content development methodologies, we define the VoCol methodology
+to address these requirements. We implemented a prototype based on a
+loose coupling of validation and documentation generation components
+on top of a standard Git repository. All of these components, even the
+repository engine, can be exchanged with little effort. By evaluating the
+usefulness of error feedback of different tools in the realistic setting of an
+emerging mobility vocabulary we prove, however, that our choice of the
+crucial validation component is workable.""" ;
+               doap:maintainer people:NiklasPetersen ;
+               ns4:startDate "\"2014-08-01+02:00\"^^xsd:date" ;
+               eis:hookline "A low-threshold agile methodology for collaborative vocabulary development" ;
+               eis:partner ns16:brox ;
+               eis:status "Ongoing" ;
+               site:content """ In order to address the lack of vocabulary development support, we designed
+VoCol, a low-threshold agile methodology for collaborative vocabulary devel-
+opment. Inspired by agile software and content development methodologies, we
+define the VoCol methodology to address these requirements. We implemented
+a prototype based on a loose coupling of collaboration, authoring, project man-
+agement, validation, documentation and visualization generation components
+on top of a standard Git repository. All of these components, even the repos-
+itory engine, can be exchanged with little effort to cater for specific use cases.
+Through its continuous vocabulary component integration and verification func-
+tions, VoCol can be seen as an analogon to continuous integration in software
+engineering. You can find more on our [technical report.](http://zenodo.org/record/15023?ln=en#.VPlt6s1GjUY \"VoVol Technical Report\")"""^^sysont:Markdown ;
+               doap:Technical_Report "http://zenodo.org/record/15023?ln=en#.VPlt6s1GjUY" .
+
+projects:SCORvoc a foaf:Project, eis:CommunityProject ;
+                 rdfs:label "SCORvoc" ;
+                 skos:prefLabel "SCORvoc" ;
+                 ov:screenshot <http://eis.iai.uni-bonn.de/blog/wp-content/uploads/2015/10/SCORVocab.png> ;
+                 dcterms:abstract "A vocabulary representing the Supply Chain Organizations Reference (SCOR)." ;
+                 doap:maintainer people:NiklasPetersen ;
+                 eis:hookline "Supply Chain Organization Reference (SCOR) vocabulary" ;
+                 eis:partner ns16:brox ;
+                 foaf:homepage "";
+                 foaf:logo "" ;
+                 eis:promoted "1"^^xsd:integer ;
+                 eis:status "Ongoing" ;
+                 site:content """
+Advanced, highly specialized economies require instant, robust and efficient information flows within its value-added and supply chain networks.
+Especially also in the context of the recent Industry 4.0, smart manufacturing or cyber-physical systems initiatives more efficient and effective information exchange in sypply networks is of paramount importance.
+The Supply Chain Operation Reference (SCOR) is a cross-industry approach to lay the groundwork for this goal by defining a conceptual model for supply chain related information.
+We describe an semantics-based approach for facilitating information flows in supply networks and enabling a round-trip between the definition of metrics and KPIs as well as they automatized execution and propagation.
+It is centered around the SCORVoc vocabulary which represents the Supply Chain Council's SCOR standard entirely as an RDF vocabulary."""^^sysont:Markdown ;
+                 <doap:browse> <https://github.com/vocol/scor> .

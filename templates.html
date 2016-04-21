@@ -1,0 +1,106 @@
+<!-- # Visualizer Tempaltes -->
+
+<script id="release" type="text/uduvudu-template">
+<tr>
+  <td> <%- release.title.u %> </td>
+  <td> <%- release.date.u %> </td>
+  <td> <%- release.place.u %> </td>
+</tr>
+</script>
+
+<script id="artistInfo" type="text/uduvudu-template">
+<div>
+  <p>hello </p>
+  <%= artistInfo.label.u %> 
+  <%= artistInfo.ArtistWiki.u %> 
+  <%= artistInfo.ArtistType.u %> 
+</div>
+</script>
+
+<script id="releaseLink" type="text/uduvudu-template">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>Releases</h3>
+  </div>
+  <div class="panel-body">
+  <table class="table table-bordered">
+    <tr>
+      <th>title </th>
+      <th>date </th>
+      <th>place </th>
+    </tr>
+    <tbody>
+      <% _.each(releaseLink, function(i){ print(template(i.release))}); %>
+    </tbody>
+  </table>
+  </div>
+</div>
+</script>
+
+
+
+<script id="date" type="text/uduvudu-template">
+    <td> <%- date.u %> </td>
+</script>
+<script id="label" type="text/uduvudu-template">
+    <td> <%- label.u %> </td>
+</script>
+<script id="gender" type="text/uduvudu-template">
+  <p> gender: <%- gender.u %> </p>
+</script>
+
+<script id="place" type="text/uduvudu-template">
+  <td> <%- place.u %> </td>
+</script>
+<script id="title" type="text/uduvudu-template">
+  <td> <%- title.u %> </td>
+</script>
+<script id="artistType" type="text/uduvudu-template">
+  <p> <%- artistType.u %> </p>
+</script>
+<script id="TypeGroup" type="text/uduvudu-template">
+  <p> <%- TypeGroup.u %> </p>
+</script>
+<script id="ArtistWiki" type="text/uduvudu-template">
+  <p> <%- ArtistWiki.u %> </p>
+</script>
+
+<!-- container for literals -->
+<script id="literals" type="text/uduvudu-template">
+<div class="panel-group" role="tablist">
+  <div class="panel panel-default">
+    <div class="panel-heading" role="tab" id="collapseListGroupHeading1">
+      <h4 class="panel-title"> <a class="" role="button" data-toggle="collapse" href="#collapseListGroup1" aria-expanded="true" aria-controls="collapseListGroup1"> Other Literals</a> </h4>
+    </div>
+    <div id="collapseListGroup1" class="panel-collapse collapse" role="tabpanel" aria-labelledby="collapseListGroupHeading1" aria-expanded="true">
+      <ul class="list-group">
+        <% _.each(literals, function(e) {print('<li class="list-group-item">'+template(e.literal))+'</li>'}); %>
+      </ul>
+      <div class="panel-footer"></div>
+    </div>
+  </div>
+</div>
+</script>
+
+<!-- literal -->
+<script id="literal" type="text/uduvudu-template">
+    <b><%-literal.name.u%></b>: <%-literal.text.u%>
+</script>
+
+<!-- container for literals -->
+<script id="unknowns" type="text/uduvudu-template">
+    <div style="clear: both;">
+        <% /*_.each(unknowns, function(e) {print(template(e.unknown))});*/ %>
+    </div>
+</script>
+
+<!-- unknown -->
+<script id="unknown" type="text/uduvudu-template">
+  <div style=" width: 140px; height: 140px; float: left; overflow: hidden;">
+      <small><p><%=unknown.subject.u%><br />&#9608;<br /><%=unknown.predicate.u%><br />&#9608;<br /><%=unknown.object.u%></p></small>
+  </div>
+</script>
+
+<!-- void -->
+<script id="void" type="text/uduvudu-template">
+</script>

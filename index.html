@@ -33,16 +33,15 @@
         </form>
       </div>
     </div>
-    <div id="main">
-
-    <ul class="nav nav-tabs">
-        <li class="active"><a href="#">Overview</a></li>
-        <li><a href="#">Releases</a></li>
-        <li><a href="#">Recording</a></li>
-        <li><a href="#">Events</a></li>
-        <li><a href="#">See Also</a></li>
-    </ul>
-
+    <div id="tODO-change-name">
+      <ul class="nav nav-tabs">
+          <li class="active"><a href="#">Overview</a></li>
+          <li><a href="#">Releases</a></li>
+          <li><a href="#">Recording</a></li>
+          <li><a href="#">Events</a></li>
+          <li><a href="#">See Also</a></li>
+      </ul>
+      <div id="main"></div>
     </div>
   </div>
 
@@ -64,11 +63,31 @@
   <script src="lib/rdf-ext.min.js"></script>
   <script src="lib/bootstrap3-typeahead.min.js"></script>
   <script src="lib/marked.min.js"></script>
-  <script src="js/matcher.js"></script>
-  <script src="js/people.js"></script>
   <script src="lib/uduvudu.js"></script>
-  <script src="js/main#js"></script>
-  <script src="query.js"></script>
+  <script src="js/matcher.js"></script>
+  <script src="js/artist.js"></script>
+  <script src="js/queries.js"></script>
+  <script src="js/main.js"></script>
+  <script> 
+ $(document).ready(function () {
+
+  $(window).on('hashchange', hashUrlHandler);
+  $(document).ready(hashUrlHandler);
+
+
+    $('#identifier-search').typeahead({
+      source: artists,
+      updater: function(selected) {
+        document.location = '#/' + selected;
+        console.log('Loading artist:' + selected);
+      }
+    });
+
+    $('form').submit(function(event) {
+      event.preventDefault();
+    });
+ });
+</script>
 </body>
 
 </html>
