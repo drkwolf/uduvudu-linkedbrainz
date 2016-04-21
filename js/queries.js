@@ -7,7 +7,7 @@ PREFIX mo: <http://purl.org/ontology/mo/>
 PREFIX event: <http://purl.org/NET/c4dm/event.owl#> 
 PREFIX lkb: <http://linkedbrainz.org/>
 `;
-var q1_artist_info = prefixes +`
+var q1 = prefixes +`
 construct {
   lkb:{artist} a mo:MusicArtist;
       lkb:ArtistType ?type;
@@ -22,7 +22,7 @@ where {
     FILTER (?type != <http://purl.org/ontology/mo/MusicArtist>)
 }`;
 
-var q2_artist_release = prefixes+`
+var q2 = prefixes+`
 construct {
   lkb:{artist} a  foaf:name;
   lkb:release ?release.

@@ -2,10 +2,8 @@
 function hashUrlHandler() {
   if (location.hash) {
     var identifier = location.hash.slice(2);
-    //loadArtist(identifier, q1_artist_info);
-    loadArtist(identifier, q2_artist_release);
-    //loadArtist(identifier, q2_artist_release);
-    //loadArtist(identifier, q2_artist_release);
+    loadArtist(identifier, q1, $('#q1'));
+      $('#q1').addClass('active').siblings('[data-tab]').removeClass('active');
     $('#identifier-search').val(identifier);
     document.title = identifier + ' | Uduvudu LinkedBrainz';
   } else {
@@ -28,7 +26,7 @@ function get_request(query, options) {
 }
 
 
-function loadArtist(name, query) {
+function loadArtist(name, query, elem) {
   var store = new rdf.LdpStore();
   var resource = 'http://linkedbrainz.org/'+name;
   var request = get_request(query.replace(/{artist}/g, name));
@@ -64,7 +62,7 @@ function loadArtist(name, query) {
         resource: resource
       }, function(out) {
         // write the result of the processing in the main div
-        $('#main').html(out);
+        elem.html(out);
       });
     } else {
       $('#main').html('<div class="alert alert-error" role="alert">Error: ' + error + '</div>');

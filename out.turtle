@@ -1,0 +1,9 @@
+@prefix rdfs:	<http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc:	<http://purl.org/dc/elements/1.1/> .
+@prefix foaf:	<http://xmlns.com/foaf/0.1/> .
+@prefix ns1:	<http://musicbrainz.org/release/37e955d4-a53c-45aa-a812-1b23b88dbc13#> .
+@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
+
+ns1:_  event:place	"United States";
+	foaf:made	"Battle Hymns";
+	dc:date	"1982" .
