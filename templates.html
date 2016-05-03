@@ -1,10 +1,20 @@
 <!-- # Visualizer Tempaltes -->
 
+<script id="abstract" type="text/uduvudu-template">
+  <p> <%- abstract.u %> </p>
+</script>
+
+<script id="thumbnail" type="text/uduvudu-template">
+    <img src="<%- thumbnail.u %>">
+</script>
+
+
 <script id="release" type="text/uduvudu-template">
+
   <tr>
-    <td> <a href=""> <%- release.title.u %> </td>
+  <td> <a onClick="loadQ3(event,this)" link="<%= release.link.u %>"> <%- release.title.u %> </a> </td>
     <td> <%- release.date.u %> </td>
-    <td> <%- release.place.u %>  </td>
+    <td><%- release.place.u %> </td>
 </tr>
 </script>
 
@@ -17,12 +27,70 @@
 </div>
 </script>
 
+
+<script id="artist" type="text/uduvudu-template">
+<tr>
+  <td> <a href=""> <%- artist.name.u %> </a> </td>
+  <td> <%- artist.gender.u %> </td>
+</tr>
+</script>
+
+<script id="track" type="text/uduvudu-template">
+<tr>
+  <td> <a href=""> <%- track.title.u %> </a> </td>
+  <td> <%- track.duration.u %> </td>
+</tr>
+</script>
+
+
+
+
+<script id="membersLink" type="text/uduvudu-template">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>members</h3>
+  </div>
+  <div class="panel-body">
+  <table class="table table-bordered">
+    <tr>
+      <th>name </th>
+      <th>gender </th>
+    </tr>
+    <tbody>
+      <% _.each(membersLink, function(i){ print(template(i.artist))}); %>
+    </tbody>
+  </table>
+  </div>
+</div>
+</script>
+
+<script id="tracksLink" type="text/uduvudu-template">
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3>Tracks</h3>
+  </div>
+  <div id="releases" class="panel-body">
+  <table class="table table-bordered">
+    <tr>
+      <th>title </th>
+      <th>duration </th>
+    </tr>
+    <tbody>
+      <% _.each(tracksLink, function(i){ print(template(i.track))}); %>
+    </tbody>
+  </table>
+  </div>
+</div>
+</script>
+
+
+
 <script id="releaseLink" type="text/uduvudu-template">
 <div class="panel panel-default">
   <div class="panel-heading">
     <h3>Releases</h3>
   </div>
-  <div class="panel-body">
+  <div id="releases" class="panel-body">
   <table class="table table-bordered">
     <tr>
       <th>title </th>
@@ -38,6 +106,9 @@
 </script>
 
 
+</script>
+
+
 
 <script id="date" type="text/uduvudu-template">
     <td> <%- date.u %> </td>
@@ -48,6 +119,11 @@
 <script id="gender" type="text/uduvudu-template">
   <p> gender: <%- gender.u %> </p>
 </script>
+<script id="name" type="text/uduvudu-template">
+  <p> gender: <%- name.u %> </p>
+</script>
+
+
 
 <script id="place" type="text/uduvudu-template">
   <td> <%- place.u %> </td>
