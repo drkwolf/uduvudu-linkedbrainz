@@ -48,13 +48,13 @@
 <script id="membersLink" type="text/uduvudu-template">
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3>members</h3>
+    <h3>Members</h3>
   </div>
   <div class="panel-body">
   <table class="table table-bordered">
     <tr>
-      <th>name </th>
-      <th>gender </th>
+      <th>Name </th>
+      <th>Gender </th>
     </tr>
     <tbody>
       <% _.each(membersLink, function(i){ print(template(i.artist))}); %>
@@ -72,8 +72,8 @@
   <div id="releases" class="panel-body">
   <table class="table table-bordered">
     <tr>
-      <th>title </th>
-      <th>duration </th>
+      <th>Title </th>
+      <th>Duration </th>
     </tr>
     <tbody>
       <% _.each(tracksLink, function(i){ print(template(i.track))}); %>
@@ -93,9 +93,9 @@
   <div id="releases" class="panel-body">
   <table class="table table-bordered">
     <tr>
-      <th>title </th>
-      <th>date </th>
-      <th>place </th>
+      <th>Title </th>
+      <th>Date </th>
+      <th>Place </th>
     </tr>
     <tbody>
       <% _.each(releaseLink, function(i){ print(template(i.release))}); %>
