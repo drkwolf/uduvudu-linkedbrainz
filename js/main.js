@@ -1,8 +1,17 @@
+function loadQ3(event, ele) {
+  var identifier = location.hash.slice(2);
+  var link  = $(ele).attr('link');
+  var q = q3.replace(/{release}/g, link)  ;
+//   $('[data-tab=q3]').parent().addClass('active').siblings().removeClass('active')
+   $('[data-tab=q3]').tab('show');
+   loadArtist(identifier, q, $('#q3'));
+   //console.log(identifier);
+}
 
 function hashUrlHandler() {
   if (location.hash) {
     var identifier = location.hash.slice(2);
-    loadArtist(identifier, q1, $('#q1'));
+    loadArtist(identifier, q1, $('#q1'), true);
       $('#q1').addClass('active').siblings('[data-tab]').removeClass('active');
     $('#identifier-search').val(identifier);
     document.title = identifier + ' | Uduvudu LinkedBrainz';
@@ -12,9 +21,10 @@ function hashUrlHandler() {
 }
 
 //query
-function get_request(query, options) {
+function get_request(query, options, service) {
   var endPointUrl = 'http://diufpc116.unifr.ch:8890/sparql';
   var uri = 'http://linkedbrainz.org';
+  if(!service) uri = '';
   var format = 'text/turtle';
   //        var format = 'application/rdf+xml';
   //        var format = 'text/n3';
@@ -26,10 +36,16 @@ function get_request(query, options) {
 }
 
 
-function loadArtist(name, query, elem) {
+function loadArtist(name, query, elem, service) {
+  if (service === undefined) {
+    service = false;
+  }
   var store = new rdf.LdpStore();
   var resource = 'http://linkedbrainz.org/'+name;
-  var request = get_request(query.replace(/{artist}/g, name));
+
+  query = query.replace(/{artist}/g, name);
+  
+  var request = get_request(query, service);
   //      request = 'data/result1.n3';
 
   //console.log(request);
@@ -55,9 +71,9 @@ function loadArtist(name, query, elem) {
   store.graph(request, function(graph, error) {
 
     if (error == null) {
-      console.debug('successfully loaded ' + graph.toArray().length + ' triples');
+      //console.debug('successfully loaded ' + graph.toArray().length + ' triples');
       // resource (entry for template search) is same as source in this example
-      console.log(graph.toArray());
+      //console.log(graph.toArray());
       uduvudu.process(graph, {
         resource: resource
       }, function(out) {
