@@ -34,7 +34,7 @@ where {
          dbpedia-owl:abstract ?abstract ;
         dbpedia-owl:thumbnail ?thumbnail .
 
-   FILTER (langMatches(lang(?abstract),"fr"))
+   FILTER (langMatches(lang(?abstract),"en"))
   }
   ?members mo:member_of ?artist_gid;
   foaf:name ?name;
