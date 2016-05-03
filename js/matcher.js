@@ -2,7 +2,19 @@ var combineMatchers = [{
   matcherName: "releaseInfo",
   templateVariable: "release",
   abstractTemplate: "release",
-  combineIds: ["title", "date", "place"],
+  combineIds: ["title", "date", "place","link"],
+  order: 21000
+},{
+  matcherName: "membersInfo",
+  templateVariable: "artist",
+  abstractTemplate: "artist",
+  combineIds: ["name", "gender"],
+  order: 21000
+},{
+  matcherName: "tracksInfo",
+  templateVariable: "track",
+  abstractTemplate: "track",
+  combineIds: ["title", "duration"],
   order: 21000
 },{
   matcherName: "artistInfo",
@@ -11,14 +23,30 @@ var combineMatchers = [{
   order: 82000
 }];
 
-var linkMatchers = [{
+var linkMatchers = [{ 
   matcherName: "releaseLink",
   predicate: "http://linkedbrainz.org/release",
   templateVariable: "releaseLink",
   abstractTemplate: "releaseLink",
   order: 22000,
   linkIds: ["releaseInfo"]
-}];
+},{ 
+  matcherName: "membersLink",
+  predicate: "http://linkedbrainz.org/members",
+  templateVariable: "membersLink",
+  abstractTemplate: "membersLink",
+  order: 22000,
+  linkIds: ["membersInfo"]
+},{ 
+  matcherName: "tracksLink",
+  predicate: "http://linkedbrainz.org/track",
+  templateVariable: "tracksLink",
+  abstractTemplate: "tracksLink",
+  order: 22000,
+  linkIds: ["tracksInfo"]
+}
+
+];
 
 
 var predicateMatchers = [{
@@ -51,7 +79,19 @@ var predicateMatchers = [{
   templateVariable: "artistType",
   abstractTemplate: "artistType",
   order: 90000
+},  {
+  matcherName: "link",
+  predicate: "http://linkedbrainz.org/link",
+  templateVariable: "link",
+  abstractTemplate: "link",
+  order: 90000
 }, {
+  matcherName: "duration",
+  predicate: "http://purl.org/ontology/mo/duration",
+  templateVariable: "duration",
+  abstractTemplate: "duration",
+  order: 90000
+},{
   matcherName: "TypeGroup",
   predicate: "http://purl.org/ontology/mo/MusicGroup",
   templateVariable: "TypeGroup",
@@ -75,7 +115,39 @@ var predicateMatchers = [{
   templateVariable: "release",
   abstractTemplate: "release",
   order: 1100000
-} 
+} , {
+  matcherName: "artists",
+  predicate: "http://musicbrainz.org/artist",
+  templateVariable: "artist",
+  abstractTemplate: "artist",
+  order: 1100000
+},  {
+  matcherName: "tracks",
+  predicate: "http://musicbrainz.org/track",
+  templateVariable: "track",
+  abstractTemplate: "track",
+  order: 1100000
+}, {
+  matcherName: "abstract",
+  predicate: "http://dbpedia.org/ontology/abstract",
+  templateVariable: "abstract",
+  abstractTemplate: "abstract",
+  order: 90000
+}, {
+  matcherName: "thumbnail",
+  predicate: "http://dbpedia.org/ontology/thumbnail",
+  templateVariable: "thumbnail",
+  abstractTemplate: "thumbnail",
+  order: 90000
+}, {
+  matcherName: "name",
+  predicate: "http://xmlns.com/foaf/0.1/name",
+  templateVariable: "name",
+  abstractTemplate: "name",
+  order: 90000
+},
+
+
 
 ];
 
