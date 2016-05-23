@@ -1,17 +1,50 @@
+function escapeRegExp(str) {
+  return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
+}
+
+function msToTime(duration) {
+  var //milliseconds = parseInt((duration%1000)/100),
+     seconds = parseInt((duration/1000)%60)
+    , minutes = parseInt((duration/(1000*60))%60)
+    , hours = parseInt((duration/(1000*60*60))%24);
+
+  var time= "";
+  if(hours > 9) {
+    time = hours + ':';
+  } else if (hours > 0) {
+    time = "0" + hours +":";
+  }
+
+  minutes = (minutes < 10) ? "0" + minutes : minutes;
+  seconds = (seconds < 10) ? "0" + seconds : seconds;
+
+  return time  + minutes + ":" + seconds
+}
+
 function loadQ3(event, ele) {
-  var identifier = location.hash.slice(2);
+  var identifier = unescape(location.hash.slice(2));
   var link  = $(ele).attr('link');
-  var q = q3.replace(/{release}/g, link)  ;
+  var q = q3_track.replace(/{release}/g, link)  ;
 //   $('[data-tab=q3]').parent().addClass('active').siblings().removeClass('active')
-   $('[data-tab=q3]').tab('show');
-   loadArtist(identifier, q, $('#q3'));
-   //console.log(identifier);
+   p = loadArtist(identifier, q, $('#q3'));
+   p.then(function(finished){
+   $('#release-modal-title').text($(ele).text());
+
+     $('[role=duration]').each(function () {
+       duration =msToTime($(this).text());
+       $(this).text(duration);
+     });
+     $('#release-modal').modal('show');
+
+
+   });
+         console.log($(ele).text());
 }
 
 function hashUrlHandler() {
   if (location.hash) {
-    var identifier = location.hash.slice(2);
-    loadArtist(identifier, q1, $('#q1'), true);
+    var identifier =unescape( location.hash.slice(2));
+    loadArtist(identifier, q1, $('#q1'), false);
       $('#q1').addClass('active').siblings('[data-tab]').removeClass('active');
     $('#identifier-search').val(identifier);
     document.title = identifier + ' | Uduvudu LinkedBrainz';
@@ -20,12 +53,35 @@ function hashUrlHandler() {
   }
 }
 
+function get_count(query, artist) {
+
+ query = query.replace(/{artist}/g, artist);
+ var request = get_request(query, false);
+ var store = new rdf.LdpStore();
+ var resource = 'http://linkedbrainz.org/_ArtistName';
+ var total = 0;
+
+ var promise = new Promise(function(resolve, reject) {
+   store.graph(request, function(graph, error) {
+     if (error == null) {
+       console.debug('successfully loaded ' + graph.toArray().length + ' triples');
+       console.log(graph.toArray());
+       total = graph.toArray()[3].object.valueOf();
+       resolve(total);
+     } else {
+       //TODO showErro
+     }
+   });
+ });
+  return promise;
+}
+
 //query
-function get_request(query, options, service) {
+function get_request(query, service, format) {
   var endPointUrl = 'http://diufpc116.unifr.ch:8890/sparql';
   var uri = 'http://linkedbrainz.org';
   if(!service) uri = '';
-  var format = 'text/turtle';
+  var format = format || 'text/turtle';
   //        var format = 'application/rdf+xml';
   //        var format = 'text/n3';
   //        var format = 'application/x-json+ld';
@@ -41,7 +97,7 @@ function loadArtist(name, query, elem, service) {
     service = false;
   }
   var store = new rdf.LdpStore();
-  var resource = 'http://linkedbrainz.org/'+name;
+  var resource = 'http://linkedbrainz.org/_ArtistName';
 
   query = query.replace(/{artist}/g, name);
   
@@ -68,6 +124,7 @@ function loadArtist(name, query, elem, service) {
       }); */
 
 
+ var promise = new Promise(function(resolve, reject) {
   store.graph(request, function(graph, error) {
 
     if (error == null) {
@@ -79,15 +136,15 @@ function loadArtist(name, query, elem, service) {
       }, function(out) {
         // write the result of the processing in the main div
         elem.html(out);
+        resolve(true);
       });
     } else {
-      $('#main').html('<div class="alert alert-error" role="alert">Error: ' + error + '</div>');
+//      $('#main').html('<div class="alert alert-error" role="alert">Error: ' + error + '</div>');
     }
   });
+});
+  return promise;
 
 } //end loadArtist
 
-    //loadArtist("Manowar");
-//    loadArtist("Madonna");
-//type ahead
 

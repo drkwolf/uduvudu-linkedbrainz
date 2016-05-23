@@ -18,10 +18,23 @@ var combineMatchers = [{
   order: 21000
 },{
   matcherName: "artistInfo",
+  templateVariable: "artistInfo",
   abstractTemplate: "artistInfo",
   combineIds: ["artistType", "gender", "ArtistWiki"],
   order: 82000
-}];
+},{
+  matcherName: "resultsInfo",
+  abstractTemplate: "resultsInfo",
+  combineIds: ["name"],
+  order: 82000
+},{
+  matcherName: "seeAlsoInfo",
+  templateVariable: "seeAlso",
+  abstractTemplate: "seeAlso",
+  combineIds: ["seeAlso", "comment"],
+  order: 82000
+}
+];
 
 var linkMatchers = [{ 
   matcherName: "releaseLink",
@@ -44,8 +57,21 @@ var linkMatchers = [{
   abstractTemplate: "tracksLink",
   order: 22000,
   linkIds: ["tracksInfo"]
+},{ 
+  matcherName: "resultsLink",
+  predicate: "http://linkedbrainz.org/results",
+  templateVariable: "resultsLink",
+  abstractTemplate: "resultsLink",
+  order: 22000,
+  linkIds: ["resultsInfo"]
+},{ 
+  matcherName: "seeAlsoLink",
+  predicate: "http://linkedbrainz.org/seeAlso",
+  templateVariable: "seeAlsoLink",
+  abstractTemplate: "seeAlsoLink",
+  order: 22000,
+  linkIds: ["seeAlsoInfo"]
 }
-
 ];
 
 
@@ -78,7 +104,7 @@ var predicateMatchers = [{
   predicate: "http://linkedbrainz.org/ArtistType",
   templateVariable: "artistType",
   abstractTemplate: "artistType",
-  order: 90000
+  order: 10000
 },  {
   matcherName: "link",
   predicate: "http://linkedbrainz.org/link",
@@ -96,13 +122,13 @@ var predicateMatchers = [{
   predicate: "http://purl.org/ontology/mo/MusicGroup",
   templateVariable: "TypeGroup",
   abstractTemplate: "TypeGroup",
-  order: 90000
+  order: 10000
 },{
   matcherName: "ArtistWiki",
   predicate: "http://xmlns.com/foaf/0.1/isPrimaryTopicOf" ,
   templateVariable: "ArtistWiki",
   abstractTemplate: "ArtistWiki",
-  order: 90000
+  order: 10000
 }, { //q2,
   matcherName: "gender",
   predicate: "http://xmlns.com/foaf/0.1/gender" ,
@@ -145,9 +171,25 @@ var predicateMatchers = [{
   templateVariable: "name",
   abstractTemplate: "name",
   order: 90000
+}, {
+  matcherName: "artistname",
+  predicate: "http://linkedbrainz.org/artistName",
+  templateVariable: "artistname",
+  abstractTemplate: "artistname",
+  order: 91000
+},{
+  matcherName: "seeAlso",
+  predicate: "http://www.w3.org/2000/01/rdf-schema#seeAlso",
+  templateVariable: "seeAlso",
+  abstractTemplate: "seeAlso",
+  order: 90000
+},{
+  matcherName: "comment",
+  predicate: "http://www.w3.org/2000/01/rdf-schema#comment",
+  templateVariable: "comment",
+  abstractTemplate: "comment",
+  order: 90000
 },
-
-
 
 ];
 
