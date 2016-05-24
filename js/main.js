@@ -1,7 +1,29 @@
+/**
+ * @type {String} : endpoint url
+ */
+var endPointUrl = 'http://diufpc116.unifr.ch:8890/sparql';
+
+/**
+ * @type {String} :  graph uri
+ */
+var uri         = 'http://linkedbrainz.org';
+
+/**
+ * helper function :
+ * add escape to string, so it can be used in RegExpression
+ * @param String str
+ * @return String
+ */
 function escapeRegExp(str) {
   return str.replace(/[\-\[\]\/\{\}\(\)\*\+\?\.\\\^\$\|]/g, "\\$&");
 }
 
+/**
+ * helper function : 
+ * format miliseconds into readbale format h:m:s
+ * @param duration :  integer 
+ * @return String
+ */
 function msToTime(duration) {
   var //milliseconds = parseInt((duration%1000)/100),
      seconds = parseInt((duration/1000)%60)
@@ -21,6 +43,102 @@ function msToTime(duration) {
   return time  + minutes + ":" + seconds
 }
 
+function getArtistHint(name, process) {
+        query = search_hint.replace(/{artist_reg}/g, '^'+name);
+        request = get_request(query, false,'application/rdf+json');
+        return $.get(request, function( data ) {
+          artists = data ["http://linkedbrainz.org/hints"]["http://xmlns.com/foaf/0.1/name"]; 
+          arr = $.map(artists, function(value, key){
+            return  [value['value']];
+          });
+          process(arr);
+        })
+      }
+/**
+ * callback function for submit
+ * change borwser url, document title, and load query q1
+ */
+function hashUrlHandler() {
+  if (location.hash) {
+    var identifier =unescape( location.hash.slice(2));
+    loadArtist(identifier, q1, $('#q1'), false);
+      $('#q1').addClass('active').siblings('[data-tab]').removeClass('active');
+    $('#identifier-search').val(identifier);
+    document.title = identifier + ' | Uduvudu LinkedBrainz';
+  } else {
+      console.debug('hashUrlHandler: error');
+  }
+}
+
+
+/**
+ * generate request url, the url is composed the following query strings :
+ *   endpoint : server url
+ *    default-graph-uri : (query with Service must not have this string)
+ *    query: sparql qurey
+ *    format: response format, it depends on the type of query see server *    documentation
+ * endpointUrl?default-graph-uri={uri}&query={query}&format={format}
+ *
+ * @param String query: sparql query
+ * @param String [format='text/turtle']: response format 
+ * @param Boolean [isUriEnabled=true]: add/remove default-graph-uri
+ *
+ * @return String
+ */
+function get_request(query, service, format) {
+ if(!service) uri = '';
+  var format = format || 'text/turtle';
+  //        var format = 'application/rdf+xml';
+  //        var format = 'text/n3';
+  //        var format = 'application/x-json+ld';
+
+  return endPointUrl+'?default-graph-uri='+encodeURIComponent(uri) +
+    '&query='+encodeURIComponent(query) +
+    '&format='+encodeURIComponent(format);
+}
+
+
+function loadArtist(name, query, elem, service) {
+  if (service === undefined) { service = false; }
+
+  var resource = 'http://linkedbrainz.org/_ArtistName';
+
+  //create rdf store
+  var store = new rdf.LdpStore();
+  // format query
+  query = query.replace(/{artist}/g, unescape(name));
+  query = query.replace(/{artist_reg}/g, unescape(name));
+
+  // get sparql url request 
+  var request = get_request(query, service);
+
+  // load template into the main page
+  $('#templates').load('templates.html');
+
+ var promise = new Promise(function(resolve, reject) {
+   //execute request and process the result trought the callback
+  store.graph(request, function(graph, error) {
+
+    if (error == null) {
+      uduvudu.process(graph, {
+        resource: resource
+      }, function(out) {
+        // write the result of the processing in the main div
+        elem.html(out);
+        resolve(true); //free the promise
+      });
+    } else {
+//      $('#main').html('<div class="alert alert-error" role="alert">Error: ' + error + '</div>');
+    }
+  });
+});
+  return promise;
+
+} //end loadArtist
+
+/**
+ * display query3 as modal dialog
+ */
 function loadQ3(event, ele) {
   var identifier = unescape(location.hash.slice(2));
   var link  = $(ele).attr('link');
@@ -39,18 +157,6 @@ function loadQ3(event, ele) {
 
    });
          console.log($(ele).text());
-}
-
-function hashUrlHandler() {
-  if (location.hash) {
-    var identifier =unescape( location.hash.slice(2));
-    loadArtist(identifier, q1, $('#q1'), false);
-      $('#q1').addClass('active').siblings('[data-tab]').removeClass('active');
-    $('#identifier-search').val(identifier);
-    document.title = identifier + ' | Uduvudu LinkedBrainz';
-  } else {
-
-  }
 }
 
 function get_count(query, artist) {
@@ -75,76 +181,4 @@ function get_count(query, artist) {
  });
   return promise;
 }
-
-//query
-function get_request(query, service, format) {
-  var endPointUrl = 'http://diufpc116.unifr.ch:8890/sparql';
-  var uri = 'http://linkedbrainz.org';
-  if(!service) uri = '';
-  var format = format || 'text/turtle';
-  //        var format = 'application/rdf+xml';
-  //        var format = 'text/n3';
-  //        var format = 'application/x-json+ld';
-
-  return endPointUrl+'?default-graph-uri='+encodeURIComponent(uri) +
-    '&query='+encodeURIComponent(query) +
-    '&format='+encodeURIComponent(format);
-}
-
-
-function loadArtist(name, query, elem, service) {
-  if (service === undefined) {
-    service = false;
-  }
-  var store = new rdf.LdpStore();
-  var resource = 'http://linkedbrainz.org/_ArtistName';
-
-  query = query.replace(/{artist}/g, name);
-  
-  var request = get_request(query, service);
-  //      request = 'data/result1.n3';
-
-  //console.log(request);
-  // load styles (matcher and templates) from files
-  var styles = rdf.createGraph();
-  var matcher = new rdf.LdpStore();
-
-  $('#templates').load('templates.html');
-  /*
-     matcher.graph('matcher.ttl', function(graph, error) {
-     if (!error) {
-     console.debug('matcher.tll loaded')
-     styles.addAll(graph);
-     }
-     });
-     */
-  /*  var template = new rdf.LdpStore();
-      template.graph('templates.ttl', function(graph, error) {
-      if (!error) {styles.addAll(graph);}
-      }); */
-
-
- var promise = new Promise(function(resolve, reject) {
-  store.graph(request, function(graph, error) {
-
-    if (error == null) {
-      //console.debug('successfully loaded ' + graph.toArray().length + ' triples');
-      // resource (entry for template search) is same as source in this example
-      //console.log(graph.toArray());
-      uduvudu.process(graph, {
-        resource: resource
-      }, function(out) {
-        // write the result of the processing in the main div
-        elem.html(out);
-        resolve(true);
-      });
-    } else {
-//      $('#main').html('<div class="alert alert-error" role="alert">Error: ' + error + '</div>');
-    }
-  });
-});
-  return promise;
-
-} //end loadArtist
-
 
