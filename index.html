@@ -91,24 +91,13 @@
 
  $(document).ready(function () {
     $('#identifier-search').typeahead({
-      source: function (name, process) {
-        query = search_hint.replace(/{artist_reg}/g, '^'+name);
-        request = get_request(query, false,'application/rdf+json');
-        return $.get(request, function( data ) {
-          artists = data ["http://linkedbrainz.org/hints"]["http://xmlns.com/foaf/0.1/name"]; 
-          arr = $.map(artists, function(value, key){
-            return  [value['value']];
-          });
-          console.log(arr);
-          process(arr);
-        })
-      },
+      source: getArtistHint,
       updater: function(selected) {
         document.location = '#/' + selected;
         console.log('Loading artist:' + selected);
       },
       minLength: 3,
-//      limit : 10
+      limit : 10
     });
 
 
