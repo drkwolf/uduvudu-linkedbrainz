@@ -211,8 +211,9 @@ construct{
 	}
 	           
 	where {
-	     ?artist_gid foaf:name '{artist}'.
-	    {?artist_gid rdfs:seeAlso ?seeAlso} UNION {?artist_gid rdfs:comment ?comment} 
+	    ?artist_gid foaf:name '{artist}';
+	       rdfs:seeAlso ?seeAlso.
+	       OPTIONAL {?artist_gid rdfs:comment ?comment.}. 
 	   
 }
 `;
