@@ -54,6 +54,17 @@ function getArtistHint(name, process) {
           process(arr);
         })
       }
+
+/**
+ * reset page content
+ */
+function reset_page() {
+      $('#q1').html('');
+      $('#q2').html('');
+      $('#q5').html('');
+      $('[data-tab=q1]').trigger('click')
+}
+
 /**
  * callback function for submit
  * change borwser url, document title, and load query q1
@@ -62,7 +73,9 @@ function hashUrlHandler() {
   if (location.hash) {
     var identifier =unescape( location.hash.slice(2));
     loadArtist(identifier, q1, $('#q1'), false);
-      $('#q1').addClass('active').siblings('[data-tab]').removeClass('active');
+      //$('#q1').addClass('active').siblings('[data-tab]').removeClass('active');
+      //$('[data-tab=q1]').trigger('click')
+      reset_page();
     $('#identifier-search').val(identifier);
     document.title = identifier + ' | Uduvudu LinkedBrainz';
   } else {
@@ -124,7 +137,11 @@ function loadArtist(name, query, elem, service) {
         resource: resource
       }, function(out) {
         // write the result of the processing in the main div
-        elem.html(out);
+        if(graph.length === 0) {
+          elem.html('<p> Noting Found </p>')
+        } else {
+          elem.html(out);
+        }
         resolve(true); //free the promise
       });
     } else {

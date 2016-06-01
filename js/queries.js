@@ -20,7 +20,7 @@ where {
   rdf:type ?type.
   
   FILTER regex(str(?name), "{artist_reg}", "i")
-} LIMIT 20
+} LIMIT 10
 `;
 
 var search_q= prefixes+`
@@ -102,7 +102,8 @@ where {
   ?release dc:title ?title.
   ?release_event mo:release ?release; dc:date ?date; event:place ?place.
   ?place rdfs:label ?placeTitle.
-} ORDER BY DESC(?date)
+} ORDER BY DESC(?date) 
+  Limit 40
 `;
 var q3_track= prefixes+`
 construct {
@@ -211,9 +212,8 @@ construct{
 	}
 	           
 	where {
-	    ?artist_gid foaf:name '{artist}';
-	       rdfs:seeAlso ?seeAlso.
-	       OPTIONAL {?artist_gid rdfs:comment ?comment.}. 
+	     ?artist_gid foaf:name '{artist}'.
+	    {?artist_gid rdfs:seeAlso ?seeAlso} UNION {?artist_gid rdfs:comment ?comment} 
 	   
 }
 `;

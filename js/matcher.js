@@ -99,13 +99,13 @@ var predicateMatchers = [{
   templateVariable: "place",
   abstractTemplate: "place",
   order: 90000
-}, {
+},/* {
   matcherName: "ArtistType",
   predicate: "http://linkedbrainz.org/ArtistType",
   templateVariable: "artistType",
   abstractTemplate: "artistType",
   order: 10000
-},  {
+}, */ {
   matcherName: "link",
   predicate: "http://linkedbrainz.org/link",
   templateVariable: "link",
@@ -123,13 +123,13 @@ var predicateMatchers = [{
   templateVariable: "TypeGroup",
   abstractTemplate: "TypeGroup",
   order: 10000
-},{
+},/*{
   matcherName: "ArtistWiki",
   predicate: "http://xmlns.com/foaf/0.1/isPrimaryTopicOf" ,
   templateVariable: "ArtistWiki",
   abstractTemplate: "ArtistWiki",
   order: 10000
-}, { //q2,
+}, */{ //q2,
   matcherName: "gender",
   predicate: "http://xmlns.com/foaf/0.1/gender" ,
   templateVariable: "gender",
@@ -158,13 +158,13 @@ var predicateMatchers = [{
   predicate: "http://dbpedia.org/ontology/abstract",
   templateVariable: "abstract",
   abstractTemplate: "abstract",
-  order: 90000
+  order: 90001
 }, {
   matcherName: "thumbnail",
   predicate: "http://dbpedia.org/ontology/thumbnail",
   templateVariable: "thumbnail",
   abstractTemplate: "thumbnail",
-  order: 90000
+  order: 90002
 }, {
   matcherName: "name",
   predicate: "http://xmlns.com/foaf/0.1/name",
