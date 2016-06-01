@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Uduvudu Demo - EIS Team</title>
+  <title>Uduvudu Demo - LinkedBrainz</title>
 
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="favicon.png">
   <link href="lib/bootstrap.min.css" rel="stylesheet">
   <link href="css/main.css" rel="stylesheet">
 </head>
@@ -53,7 +53,7 @@
   <footer class="footer">
     <div class="container">
       <p class="text-muted hidden">
-        See the source on <a href="https://github.com/aksakalli/uduvudu-demo">GitHub</a>. Released under <a href="LICENSE">the MIT license</a>.
+        See the source on <a href="https://github.com/ildefonsa/uduvudu-linkedbrainz">GitHub</a>.
       </p>
     </div>
   </footer>
@@ -90,6 +90,7 @@
     
 
  $(document).ready(function () {
+
     $('#identifier-search').typeahead({
       source: getArtistHint,
       updater: function(selected) {
@@ -100,6 +101,7 @@
       limit : 10
     });
 
+    
 
   $(window).on('hashchange', hashUrlHandler);
   $(document).ready(hashUrlHandler);
