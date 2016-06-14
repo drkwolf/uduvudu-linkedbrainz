@@ -19,7 +19,7 @@ where {
  ?artist_gid foaf:name ?name;
   rdf:type ?type.
   
-  FILTER regex(str(?name), "{artist_reg}", "i")
+    FILTER STRSTARTS(LCASE(str(?name)), LCASE("{artist_reg}"))
 } LIMIT 10
 `;
 
@@ -42,7 +42,8 @@ where {
   
   OPTIONAL {?artist_gid foaf:gender ?gender .}.
    OPTIONAL {?artist_gid foaf:isPrimaryTopicOf ?url.}.
-  FILTER regex(str(?name), "{artist_reg}", "i")
+
+    FILTER STRSTARTS(LCASE(str(?name)), LCASE("{artist_reg}"))
 }
 
 `;
