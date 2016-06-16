@@ -47,7 +47,6 @@
 </div>
 </script>
 
-
 <script id="artist" type="text/uduvudu-template">
 <tr>
   <td> <a href="#/<%- artist.name.u %>"> <%- artist.name.u %> </a> </td>
@@ -57,7 +56,7 @@
 
 <script id="track" type="text/uduvudu-template">
 <tr>
-  <td> <a href=""> <%- track.title.u %> </a> </td>
+  <td role= "title"> <%- track.title.u %> </td>
   <td role="duration"> <%- track.duration.u %> </td>
 </tr>
 </script>
@@ -73,13 +72,13 @@
 <script id="resultsLink" type="text/uduvudu-template">
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3>members</h3>
+    <h3>Members</h3>
   </div>
   <div class="panel-body">
   <table class="table table-bordered">
     <tr>
-      <th>name </th>
-      <th>gender </th>
+      <th>Name </th>
+      <th>Gender </th>
     </tr>
     <tbody>
     <% _.each(resultsLink, function(i){ print(template(i.result))}); %>
@@ -93,7 +92,7 @@
 <script id="membersLink" type="text/uduvudu-template">
 <div class="panel panel-default">
   <div class="panel-heading">
-    <h3>Members</h3>
+    <h3>members</h3>
   </div>
   <div class="panel-body">
   <table class="table table-bordered">
@@ -146,8 +145,6 @@
 </div>
 </script>
 
-
-</script>
 
 
 
