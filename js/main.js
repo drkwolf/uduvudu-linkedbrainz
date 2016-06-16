@@ -44,7 +44,7 @@ function msToTime(duration) {
 }
 
 function getArtistHint(name, process) {
-        query = search_hint.replace(/{artist_reg}/g, name);
+        query = search_hint.replace(/{artist}/g, name);
         request = get_request(query, false,'application/rdf+json');
         return $.get(request, function( data ) {
           artists = data ["http://linkedbrainz.org/hints"]["http://xmlns.com/foaf/0.1/name"]; 
@@ -121,7 +121,7 @@ function loadArtist(name, query, elem, service) {
   var store = new rdf.LdpStore();
   // format query
   query = query.replace(/{artist}/g, decodeURIComponent(name));
-  query = query.replace(/{artist_reg}/g, decodeURIComponent(name));
+  //query = query.replace(/{artist_reg}/g, decodeURIComponent(name));
 
   // get sparql url request 
   var request = get_request(query, service);
@@ -131,7 +131,7 @@ function loadArtist(name, query, elem, service) {
 
  var promise = new Promise(function(resolve, reject) {
    //execute request and process the result trought the callback
-	 $('body').addClass('loading') 
+	 $('body').addClass('loading');
   store.graph(request, function(graph, error) {
 	  
     if (error == null) {
@@ -177,28 +177,5 @@ function loadQ3(event, ele) {
 
    });
          console.log($(ele).text());
-}
-
-function get_count(query, artist) {
-
- query = query.replace(/{artist}/g, artist);
- var request = get_request(query, false);
- var store = new rdf.LdpStore();
- var resource = 'http://linkedbrainz.org/_ArtistName';
- var total = 0;
-
- var promise = new Promise(function(resolve, reject) {
-   store.graph(request, function(graph, error) {
-     if (error == null) {
-       console.debug('successfully loaded ' + graph.toArray().length + ' triples');
-       console.log(graph.toArray());
-       total = graph.toArray()[3].object.valueOf();
-       resolve(total);
-     } else {
-       //TODO showErro
-     }
-   });
- });
-  return promise;
 }
 

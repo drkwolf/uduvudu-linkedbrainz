@@ -19,33 +19,8 @@ where {
  ?artist_gid foaf:name ?name;
   rdf:type ?type.
   
-    FILTER STRSTARTS(LCASE(str(?name)), LCASE("{artist_reg}"))
+    FILTER STRSTARTS(LCASE(str(?name)), LCASE("{artist}"))
 } LIMIT 10
-`;
-
-var search_q= prefixes+`
-construct {
-  lkb:_ArtistName a mo:MusicArtist;
- lkb:members ?artist_gid.
- 
- ?artist_gid a lkb:members;
-  foaf:name ?name;
-  ov:sortLabel ?slable;
-  foaf:isPrimaryTopicOf ?url;
-  rdf:type ?type;
-  foaf:gender ?gender .
-}
-where {
- ?artist_gid foaf:name ?name;
-  ov:sortLabel ?slable;
-  rdf:type ?type.
-  
-  OPTIONAL {?artist_gid foaf:gender ?gender .}.
-   OPTIONAL {?artist_gid foaf:isPrimaryTopicOf ?url.}.
-
-    FILTER STRSTARTS(LCASE(str(?name)), LCASE("{artist_reg}"))
-}
-
 `;
 
 var q1 = prefixes +`
@@ -149,62 +124,6 @@ where {
 
 } Limit {limit} offset {offset}
 `;
-/*
-var count_release = prefixes+`
-select count(?release)
-  where {
-    ?release rdf:type mo:Release.
-    {artist_id} foaf:name ?name; foaf:made ?release.
-    ?release dc:title ?title.
-
-  } group by ?name
-`;
-
-var count_tracks = prefixes+`
-
-select count(?track)
-where {
-  ?release rdf:type mo:Release.
-  ?track rdf:type mo:Track.
-  ?record rdf:type mo:Record.
-  {artist_id} foaf:name ?name; foaf:made ?release.
-  ?release mo:record ?record.
-  ?record mo:track ?track.
-} Group by ?name
-`;
-
-var count_search2 = prefixes+`
-select ?track_nb ?release_nb where {
-{
-  select count(?track) as ?track_nb
-  where {
-    ?release rdf:type mo:Release.
-    ?track rdf:type mo:Track.
-    ?record rdf:type mo:Record.
-    {artist_id} foaf:name ?name; foaf:made ?release.
-    ?release mo:record ?record.
-    ?record mo:track ?track.
- } Group by ?name 
-} union {
-  select count(?release)  as ?release_nb 
-    where {
-      ?release rdf:type mo:Release.
-      {artist_id} foaf:name ?name; foaf:made ?release.
-      ?release dc:title ?title.
-  } group by ?name
- }
-
-}
-`;
-var count_search = prefixes+`
-select count(*)as ?total
-where {
-  ?artist_gid foaf:name ?name;
-  rdf:type mo:MusicArtist.
-  FILTER regex(str(?name), "{artist}", "i")
-} 
-`;
-*/
 
 var q5 = prefixes+`
 construct{
