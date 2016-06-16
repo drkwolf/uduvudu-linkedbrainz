@@ -106,6 +106,7 @@ where {
 } ORDER BY DESC(?date) 
   Limit 40
 `;
+
 var q3_track= prefixes+`
 construct {
   lkb:_ArtistName a mo:MusicArtist;
@@ -148,7 +149,7 @@ where {
 
 } Limit {limit} offset {offset}
 `;
-
+/*
 var count_release = prefixes+`
 select count(?release)
   where {
@@ -203,7 +204,7 @@ where {
   FILTER regex(str(?name), "{artist}", "i")
 } 
 `;
-
+*/
 
 var q5 = prefixes+`
 construct{

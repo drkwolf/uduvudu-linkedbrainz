@@ -44,7 +44,7 @@ function msToTime(duration) {
 }
 
 function getArtistHint(name, process) {
-        query = search_hint.replace(/{artist_reg}/g, '^'+name);
+        query = search_hint.replace(/{artist_reg}/g, name);
         request = get_request(query, false,'application/rdf+json');
         return $.get(request, function( data ) {
           artists = data ["http://linkedbrainz.org/hints"]["http://xmlns.com/foaf/0.1/name"]; 
@@ -71,7 +71,8 @@ function reset_page() {
  */
 function hashUrlHandler() {
   if (location.hash) {
-    var identifier =unescape( location.hash.slice(2));
+    var identifier =decodeURIComponent( location.hash.slice(2));
+      console.log(identifier);
     loadArtist(identifier, q1, $('#q1'), false);
       //$('#q1').addClass('active').siblings('[data-tab]').removeClass('active');
       //$('[data-tab=q1]').trigger('click')
@@ -119,8 +120,8 @@ function loadArtist(name, query, elem, service) {
   //create rdf store
   var store = new rdf.LdpStore();
   // format query
-  query = query.replace(/{artist}/g, unescape(name));
-  query = query.replace(/{artist_reg}/g, unescape(name));
+  query = query.replace(/{artist}/g, decodeURIComponent(name));
+  query = query.replace(/{artist_reg}/g, decodeURIComponent(name));
 
   // get sparql url request 
   var request = get_request(query, service);
@@ -130,8 +131,9 @@ function loadArtist(name, query, elem, service) {
 
  var promise = new Promise(function(resolve, reject) {
    //execute request and process the result trought the callback
+	 $('body').addClass('loading') 
   store.graph(request, function(graph, error) {
-
+	  
     if (error == null) {
       uduvudu.process(graph, {
         resource: resource
@@ -147,6 +149,7 @@ function loadArtist(name, query, elem, service) {
     } else {
 //      $('#main').html('<div class="alert alert-error" role="alert">Error: ' + error + '</div>');
     }
+    $('body').removeClass('loading');
   });
 });
   return promise;
@@ -157,7 +160,7 @@ function loadArtist(name, query, elem, service) {
  * display query3 as modal dialog
  */
 function loadQ3(event, ele) {
-  var identifier = unescape(location.hash.slice(2));
+  var identifier = decodeURIComponent(location.hash.slice(2));
   var link  = $(ele).attr('link');
   var q = q3_track.replace(/{release}/g, link)  ;
 //   $('[data-tab=q3]').parent().addClass('active').siblings().removeClass('active')
